@@ -1,13 +1,5 @@
 [
     {
-        "id": "12-minibattles",
-        "name": "12 MiniBattles",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/295.png",
-        "category": "Arcade",
-        "type": "link",
-        "content": "https://12minibattles-16543324.codehs.me/index.html"
-    },
-    {
         "id": "adventure-drivers",
         "name": "Adventure Drivers",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/443.png",
