@@ -1,0 +1,26 @@
+[
+    {
+        "id": "12-minibattles",
+        "name": "12 MiniBattles",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/295.png",
+        "category": "Arcade",
+        "type": "link",
+        "content": "https://12minibattles-16543324.codehs.me/index.html"
+    },
+    {
+        "id": "adventure-drivers",
+        "name": "Adventure Drivers",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/443.png",
+        "category": "Racing",
+        "type": "link",
+        "content": "https://adventuredrivers-16544984.codehs.me/index.html"
+    },
+    {
+        "id": "andys-apple-farm",
+        "name": "Andys Apple Farm",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/426.png",
+        "category": "Horror",
+        "type": "link",
+        "content": "https://andysapplefarm-16544991.codehs.me/index.html"
+    }
+]
