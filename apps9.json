@@ -40,11 +40,11 @@
         "content": "https://chatbox.computer.com/chat"
     },
     {
-        "id": "name",
-        "name": "name",
-        "thumbnail": "cover",
-        "category": "cat",
+        "id": "oasis-sketching",
+        "name": "Oasis Sketching",
+        "thumbnail": "https://codehs.com/uploads/bff58db51062c71199ec82cc8720bbd6",
+        "category": "Creative",
         "type": "link",
-        "content": "link"
+        "content": "https://oasissketching-16887392.codehs.me/index.html"
     }
 ]
