@@ -16,12 +16,12 @@
         "content": "https://buttonboom-16884862.codehs.me/index.html"
     },
     {
-        "id": "name",
-        "name": "name",
-        "thumbnail": "cover",
-        "category": "cat",
+        "id": "fake-hacker",
+        "name": "Fake Hacker",
+        "thumbnail": "https://codehs.com/uploads/88f7e54458e1bfdd5a02903dd296909c",
+        "category": "Fun",
         "type": "link",
-        "content": "link"
+        "content": "https://hackertype-16885329.codehs.me/index.html"
     },
     {
         "id": "name",
