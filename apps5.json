@@ -8,12 +8,12 @@
         "content": "https://oasisstudio-16881766.codehs.me/index.html"
     },
     {
-        "id": "name",
-        "name": "name",
-        "thumbnail": "cover",
-        "category": "cat",
+        "id": "bomb-timer",
+        "name": "Bomb Timer",
+        "thumbnail": "https://codehs.com/uploads/400f04cce6e7d92d34bc5df6d3c12717",
+        "category": "Fun",
         "type": "link",
-        "content": "link"
+        "content": "https://buttonboom-16884862.codehs.me/index.html"
     },
     {
         "id": "name",
