@@ -1,11 +1,11 @@
 [
     {
-        "id": "name",
-        "name": "name",
-        "thumbnail": "cover",
-        "category": "cat",
+        "id": "oasis-studio",
+        "name": "Oasis Studio",
+        "thumbnail": "https://codehs.com/uploads/2903e8805d0081bd7e3676f7a3a7b719",
+        "category": "Creative",
         "type": "link",
-        "content": "link"
+        "content": "https://oasisstudio-16881766.codehs.me/index.html"
     },
     {
         "id": "name",
