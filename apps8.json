@@ -32,12 +32,12 @@
         "content": "https://oasistyper-16885354.codehs.me/index.html"
     },
     {
-        "id": "name",
-        "name": "name",
-        "thumbnail": "cover",
-        "category": "cat",
+        "id": "ai-chatbot",
+        "name": "Ai Chatbot",
+        "thumbnail": "https://codehs.com/uploads/ecc2c67d69bc4fff3b7e5646824a639e",
+        "category": "Tools",
         "type": "link",
-        "content": "link"
+        "content": "https://chatbox.computer.com/chat"
     },
     {
         "id": "name",
