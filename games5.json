@@ -48,6 +48,14 @@
         "content": "https://attackhole-16544998.codehs.me/index.html"
     },
     {
+        "id": "baseball-bros",
+        "name": "Baseball Bros",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/547.png",
+        "category": "Sports",
+        "type": "link",
+        "content": "https://baseballbros-16908521.codehs.me"
+    },
+    {
         "id": "bad-piggies",
         "name": "Bad Piggies",
         "thumbnail": "https://codehs.com/uploads/13c2fd43310a906f79ecc51daa1147ce",
