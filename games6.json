@@ -5,7 +5,7 @@
         "thumbnail": "https://codehs.com/uploads/17e4a5092668ea2e67d44a211aec5d20",
         "category": "Adventure",
         "type": "link",
-        "content": "https://oasisportal.codehs.me/apps"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/apps.html"
     },
     {
         "id": "12-minibattles",
@@ -13,15 +13,16 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/295.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://12minibattles-16543324.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/12-minibattles.html"
     },
     {
         "id": "adventure-drivers",
         "name": "Adventure Drivers",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/443.png",
+        "bannerImage": "https://placehold.co/1200x300/334155/E2E8F0?text=Custom+Adventure+Drivers+Banner",
         "category": "Racing",
         "type": "link",
-        "content": "https://adventuredrivers-16544984.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/adventure-drivers.html"
     },
     {
         "id": "andys-apple-farm",
@@ -29,7 +30,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/426.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://andysapplefarm-16544991.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/andys-apple-farm.html"
     },
     {
         "id": "angry-birds",
@@ -37,7 +38,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/63.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://angrybirds-16544878.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/angry-birds.html"
     },
     {
         "id": "attack-hole",
@@ -45,7 +46,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/13.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://attackhole-16544998.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/attack-hole.html"
     },
     {
         "id": "basket-bros",
@@ -53,7 +54,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/547.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://baseballbros-16908521.codehs.me"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/basket-bros.html"
     },
     {
         "id": "baseball-bros",
@@ -61,7 +62,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/547.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://baseballbros-16908521.codehs.me"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/baseball-bros.html"
     },
     {
         "id": "bad-piggies",
@@ -69,7 +70,7 @@
         "thumbnail": "https://codehs.com/uploads/13c2fd43310a906f79ecc51daa1147ce",
         "category": "Sandbox",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/badpiggies"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bad-piggies.html"
     },
     {
         "id": "bacon-may-die",
@@ -77,7 +78,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/268.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://baconmaydie-16545027.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bacon-may-die.html"
     },
     {
         "id": "bad-monday-sim",
@@ -85,7 +86,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/522.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://badmondaysim-16545030.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bad-monday-sim.html"
     },
     {
         "id": "baldis-basics",
@@ -93,7 +94,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/466.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://baldisbasics-16545000.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/baldis-basics.html"
     },
     {
         "id": "basket-random",
@@ -101,7 +102,7 @@
         "thumbnail": "https://cdn4.wouterplanet.com/covers/minigames/basket-random.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/basketrandom"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/basket-random.html"
     },
     {
         "id": "boxing-random",
@@ -109,7 +110,7 @@
         "thumbnail": "https://codehs.com/uploads/dfbe877e3170fa60f67b355ed7144edd",
         "category": "Sports",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/boxingrandom"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/boxing-random.html"
     },
     {
         "id": "volley-random",
@@ -117,7 +118,7 @@
         "thumbnail": "https://cdn4.wouterplanet.com/covers/minigames/voleyrandom.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/volleyrandom"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/volley-random.html"
     },
     {
         "id": "basketball-frvr",
@@ -125,7 +126,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/28.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://basketballfrvr-16545020.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/basketball-frvr.html"
     },
     {
         "id": "bazooka-boy",
@@ -133,7 +134,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/29.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://bazookaboy-16545023.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bazooka-boy.html"
     },
     {
         "id": "bergen-truck-201x",
@@ -141,15 +142,15 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/455.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://bergentruck201x-16544096.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bergen-truck-201x.html"
     },
     {
-        "id": "Beer Rush",
+        "id": "beer-rush",
         "name": "Beer Rush",
         "thumbnail": "https://codehs.com/uploads/46923d576a9f48ea2d1c71f8a8abf109",
         "category": "Arcade",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/beer-rush/"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/beer-rush.html"
     },
     {
         "id": "bit-planes",
@@ -157,7 +158,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/330.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://bitplanes-16545210.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bit-planes.html"
     },
     {
         "id": "bottle-jump-3d",
@@ -165,7 +166,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/30.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://bottlejump3d-16545040.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bottle-jump-3d.html"
     },
     {
         "id": "bounce-masters",
@@ -173,7 +174,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/437.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://bouncemasters-16545034.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bounce-masters.html"
     },
     {
         "id": "bowmasters",
@@ -181,7 +182,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/0.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://bowmasters-16543438.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bowmasters.html"
     },
     {
         "id": "buckshot-roulette",
@@ -189,7 +190,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/205.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://buckshot-roulette-16543388.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/buckshot-roulette.html"
     },
     {
         "id": "busta-loop",
@@ -197,7 +198,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/521.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://bustaloop-16545045.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/busta-loop.html"
     },
     {
         "id": "crate-conjurer",
@@ -205,7 +206,7 @@
         "thumbnail": "https://codehs.com/uploads/779323caeb8c9082f0c09549a6c31472",
         "category": "Arcade",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/crate-conjurer/"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/crate-conjurer.html"
     },
     {
         "id": "chatbot",
@@ -213,7 +214,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/253.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://chatbot-16545057.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/chatbot.html"
     },
     {
         "id": "chess",
@@ -221,7 +222,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/151.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://chess-16545069.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/chess.html"
     },
     {
         "id": "chiikawa",
@@ -229,7 +230,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/539.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://chiikawa-16545071.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/chiikawa.html"
     },
     {
         "id": "clash-of-vikings",
@@ -237,7 +238,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/545.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://clashofvikings-16545081.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/clash-of-vikings.html"
     },
     {
         "id": "cluster-rush",
@@ -245,7 +246,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/81.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://clusterrush-16545086.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/cluster-rush.html"
     },
     {
         "id": "cookie-clicker",
@@ -253,7 +254,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/82.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://cookieclicker-16545108.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/cookie-clicker.html"
     },
     {
         "id": "coreball",
@@ -261,7 +262,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/83.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://coreball-16545117.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/coreball.html"
     },
     {
         "id": "crazy-chicken-3d",
@@ -269,7 +270,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/255.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://crazychicken3d-16545121.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/crazy-chicken-3d.html"
     },
     {
         "id": "crazy-kitty-3d",
@@ -277,7 +278,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/256.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://crazykitty3d-16543476.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/crazy-kitty-3d.html"
     },
     {
         "id": "crossy-road",
@@ -285,7 +286,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/24.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://crossyroad-16545125.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/crossy-road.html"
     },
     {
         "id": "duck-life",
@@ -293,23 +294,23 @@
         "thumbnail": "https://codehs.com/uploads/114c24b53b948ed48f80d7d17dbc22be",
         "category": "Arcade",
         "type": "link",
-        "content": "https://www.hoodamath.com/mobile/games/duck-life/game.html?nocheckorient=1"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/duck-life.html"
     },
     {
-        "id": "Dynamons-1",
+        "id": "dynamons-1",
         "name": "Dynamons 1",
         "thumbnail": "https://codehs.com/uploads/92ea08097ce831a2e7db60ab7f3b9d20",
         "category": "Adventure",
         "type": "link",
-        "content": "https://html5.gamedistribution.com/rvvASMiM/2f658de7229e49dba68786ffdc921e76/index.html?timestamp=-62135596800&countryCode=en&siteLocale=en&locale=en&gd_sdk_referrer_url=https%3A%2F%2Fkizi.com%2Fgames%2Fdynamons&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2tpemkuY29tL2dhbWVzL2R5bmFtb25zIiwicGFyZW50RG9tYWluIjoia2l6aS5jb20iLCJ0b3BEb21haW4iOiJraXppLmNvbSIsImhhc0ltcHJlc3Npb24iOmZhbHNlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjE4In0%253D"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dynamons-1.html"
     },
     {
-        "id": "Dynamons-2",
+        "id": "dynamons-2",
         "name": "Dynamons 2",
         "thumbnail": "https://codehs.com/uploads/e17f0d0cc0f882ae5d925789bb8ae4de",
         "category": "Adventure",
         "type": "link",
-        "content": "https://html5.gamedistribution.com/rvvASMiM/1fde1c67e20040dd8c53c2b75cf3d8d7/index.html?timestamp=-62135596800&countryCode=en&siteLocale=en&locale=en&gd_sdk_referrer_url=https%3A%2F%2Fkizi.com%2Fgames%2Fdynamons-2&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2tpemkuY29tL2dhbWVzL2R5bmFtb25zLTIiLCJwYXJlbnREb21haW4iOiJraXppLmNvbSIsInRvcERvbWFpbiI6ImtpemkuY29tIiwiaGFzSW1wcmVzc2lvbiI6ZmFsc2UsImxvYWRlckVuYWJsZWQiOnRydWUsImhvc3QiOiJodG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbSIsInZlcnNpb24iOiIxLjUuMTgifQ%253D%253D"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dynamons-2.html"
     },
     {
         "id": "dadish",
@@ -317,7 +318,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/357.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://dadish-16545130.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dadish.html"
     },
     {
         "id": "dadish-2",
@@ -325,7 +326,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/355.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://dadish2-16568386.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dadish-2.html"
     },
     {
         "id": "dadish-3",
@@ -333,7 +334,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/356.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://dadish3-16568388.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dadish-3.html"
     },
     {
         "id": "dalgona",
@@ -341,7 +342,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/565.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://dalgona-16545132.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dalgona.html"
     },
     {
         "id": "dead-plate",
@@ -349,7 +350,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/462.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://deadplate-16545135.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dead-plate.html"
     },
     {
         "id": "dig-deep",
@@ -357,7 +358,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/32.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://digdeep-16545140.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dig-deep.html"
     },
     {
         "id": "do-not-take-this-cat-home",
@@ -365,7 +366,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/193.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://donottakethiscathome-16545220.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/do-not-take-this-cat-home.html"
     },
     {
         "id": "doge-miner",
@@ -373,7 +374,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/511.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://dogeminer-16545225.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/doge-miner.html"
     },
     {
         "id": "doom",
@@ -381,7 +382,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/203.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://doom-16568900.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/doom.html"
     },
     {
         "id": "doom-2",
@@ -389,7 +390,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/602.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://doom2-16543280.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/doom-2.html"
     },
     {
         "id": "drift-boss",
@@ -397,7 +398,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/276.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/driftboss"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/drift-boss.html"
     },
     {
         "id": "drive-mad",
@@ -405,7 +406,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/35.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://drivemad-16544007.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/drive-mad.html"
     },
     {
         "id": "driven-wild",
@@ -413,7 +414,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/43.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://drivenwild-16545155.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/driven-wild.html"
     },
     {
         "id": "elastic-man",
@@ -421,7 +422,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/197.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://elasticman-16545183.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/elastic-man.html"
     },
     {
         "id": "endoparasitic",
@@ -429,7 +430,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/286.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://endoparasitic-16545164.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/endoparasitic.html"
     },
     {
         "id": "evil-glitch",
@@ -437,15 +438,15 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/277.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://evilglitch-16545194.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/evil-glitch.html"
     },
     {
-        "id": "Excitebike 64",
+        "id": "excitebike-64",
         "name": "Excitebike 64",
         "thumbnail": "https://codehs.com/uploads/d1e4c6bf5dfd7741bf87dc0fbfc5b2d4",
         "category": "Racing",
         "type": "link",
-        "content": "https://excitebike-64-16573861.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/excitebike-64.html"
     },
     {
         "id": "fruit-ninja",
@@ -453,7 +454,7 @@
         "thumbnail": "https://codehs.com/uploads/dbb3c70d032778ec429412a92aff3718",
         "category": "Arcade",
         "type": "link",
-        "content": "https://cdn-orange.wouterplanet.com/fruitninja"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fruit-ninja.html"
     },
     {
         "id": "f1-racing",
@@ -461,7 +462,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/579.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://f1-racing-16568587.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/f1-racing.html"
     },
     {
         "id": "five-nights-at-candys",
@@ -469,7 +470,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/503.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://fivenightsatcandys-16568374.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/five-nights-at-candys.html"
     },
     {
         "id": "five-nights-at-candys-2",
@@ -477,7 +478,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/504.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://fivenightsatcandys2-16568376.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/five-nights-at-candys-2.html"
     },
     {
         "id": "fnaf",
@@ -485,7 +486,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/38.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://fnaf-16543508.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fnaf.html"
     },
     {
         "id": "fnaf-2",
@@ -493,7 +494,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/39.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://fnaf2-16568356.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fnaf-2.html"
     },
     {
         "id": "fnaf-3",
@@ -501,7 +502,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/40.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://fnaf3-16568360.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fnaf-3.html"
     },
     {
         "id": "fnaf-4",
@@ -509,7 +510,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/41.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://fnaf4-16568363.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fnaf-4.html"
     },
     {
         "id": "fnf",
@@ -517,7 +518,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/8.png",
         "category": "Rhythm",
         "type": "link",
-        "content": "https://fnf-16543535.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fnf.html"
     },
     {
         "id": "friday-night-funkin-vs-tricky",
@@ -525,7 +526,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/481.png",
         "category": "Rhythm",
         "type": "link",
-        "content": "https://fridaynightfunkinvstricky-16545230.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/friday-night-funkin-vs-tricky.html"
     },
     {
         "id": "generic-fighter-maybe",
@@ -533,7 +534,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/519.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://genericfightermaybe-16545232.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/generic-fighter-maybe.html"
     },
     {
         "id": "getting-over-it",
@@ -541,7 +542,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/557.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://gettingoverit-16544623.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/getting-over-it.html"
     },
     {
         "id": "gobble",
@@ -549,7 +550,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/37.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://gobble-16545234.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/gobble.html"
     },
     {
         "id": "google-baseball",
@@ -557,7 +558,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/257.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://googlebaseball-16544149.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/google-baseball.html"
     },
     {
         "id": "google-feud",
@@ -565,7 +566,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/361.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://googlefeud-16545239.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/google-feud.html"
     },
     {
         "id": "granny",
@@ -573,7 +574,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/90.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://granny-16543236.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/granny.html"
     },
     {
         "id": "granny-2",
@@ -581,7 +582,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/125.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://granny2-16543552.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/granny-2.html"
     },
     {
         "id": "half-life",
@@ -589,7 +590,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/262.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://halflife-16543564.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/half-life.html"
     },
     {
         "id": "highway-racer",
@@ -597,7 +598,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/567.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://highwayracer-16545256.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/highway-racer.html"
     },
     {
         "id": "highway-racer-2-remastered",
@@ -605,7 +606,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/568.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://highwayracer2remastered-16545274.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/highway-racer-2-remastered.html"
     },
     {
         "id": "hill-climb-racing-lite",
@@ -613,7 +614,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/157.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://hillclimbracinglite-16545285.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/hill-climb-racing-lite.html"
     },
     {
         "id": "hotline-miami",
@@ -621,7 +622,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/217.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://hotlinemiami-16544114.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/hotline-miami.html"
     },
     {
         "id": "hula-hoop-race",
@@ -629,7 +630,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/569.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://hulahooprace-16545299.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/hula-hoop-race.html"
     },
     {
         "id": "human-expenditure-program",
@@ -637,7 +638,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/482.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://codehs.com/sandbox/verhechool/humanexpenditureprogram"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/human-expenditure-program.html"
     },
     {
         "id": "hypper-sandbox",
@@ -645,7 +646,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/551.png",
         "category": "Sandbox",
         "type": "link",
-        "content": "https://hyppersandbox-16545305.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/hypper-sandbox.html"
     },
     {
         "id": "ice-dodo",
@@ -653,7 +654,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/5.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://icedodo-16545311.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/ice-dodo.html"
     },
     {
         "id": "idle-breakout",
@@ -661,7 +662,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/362.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://idlebreakout-16545314.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/idle-breakout.html"
     },
     {
         "id": "idle-dice",
@@ -669,7 +670,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/294.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://idledice-16545316.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/idle-dice.html"
     },
     {
         "id": "idle-mining-empire",
@@ -677,7 +678,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/364.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://idleminingempire-16545318.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/idle-mining-empire.html"
     },
     {
         "id": "jelly-drift",
@@ -685,7 +686,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/543.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://jellydrift-16543600.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/jelly-drift.html"
     },
     {
         "id": "jelly-mario",
@@ -693,7 +694,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/315.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://jellymario-16545321.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/jelly-mario.html"
     },
     {
         "id": "jelly-resturaunt",
@@ -701,7 +702,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/570.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://jellyresturaunt-16545323.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/jelly-resturaunt.html"
     },
     {
         "id": "jetpack-joyride",
@@ -709,7 +710,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/7.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://jetpackjoyride-16545325.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/jetpack-joyride.html"
     },
     {
         "id": "johnny-trigger",
@@ -717,7 +718,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/93.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://johnnytrigger-16545327.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/johnny-trigger.html"
     },
     {
         "id": "kindergarten",
@@ -725,7 +726,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/445.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://kindergarten-16543672.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/kindergarten.html"
     },
     {
         "id": "kindergarten-2",
@@ -733,7 +734,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/446.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://kindergarten2-16544979.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/kindergarten-2.html"
     },
     {
         "id": "kindergarten-3",
@@ -741,7 +742,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/501.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://kindergarten3-16545295.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/kindergarten-3.html"
     },
     {
         "id": "kitchen-bazar",
@@ -749,7 +750,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/325.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://kitchenbazar-16545329.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/kitchen-bazar.html"
     },
     {
         "id": "kitty-toy",
@@ -757,7 +758,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/441.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://kittytoy-16545334.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/kitty-toy.html"
     },
     {
         "id": "layers-roll",
@@ -765,7 +766,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/571.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://layersroll-16545339.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/layers-roll.html"
     },
     {
         "id": "little-runmo",
@@ -773,7 +774,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/302.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://littlerunmo-16545340.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/little-runmo.html"
     },
     {
         "id": "magic-tiles-3",
@@ -781,15 +782,15 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/17.png",
         "category": "Rhythm",
         "type": "link",
-        "content": "https://magictiles3-16545346.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/magic-tiles-3.html"
     },
     {
-        "id": "Miami Crime Simulator",
+        "id": "miami-crime-simulator",
         "name": "Miami Crime Simulator",
         "thumbnail": "https://codehs.com/uploads/0e6a18b73a927375d887c2ddddfeef94",
         "category": "Strategy",
         "type": "link",
-        "content": "https://html5.gamedistribution.com/rvvASMiM/1e4fd1ecada740c29e31fafc39aa8adc/index.html?timestamp=-62135596800&amp;countryCode=en&amp;siteLocale=en&amp;locale=en&amp;gd_sdk_referrer_url=https%3A%2F%2Fkizi.com%2Fgames%2Fmiami-crime-simulator-3d&amp;gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2tpemkuY29tL2dhbWVzL21pYW1pLWNyaW1lLXNpbXVsYXRvci0zZCIsInBhcmVudERvbWFpbiI6ImtpemkuY29tIiwidG9wRG9tYWluIjoia2l6aS5jb20iLCJoYXNJbXByZXNzaW9uIjp0cnVlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjE4In0%253D"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/miami-crime-simulator.html"
     },
     {
         "id": "mario-kart-n64",
@@ -797,7 +798,7 @@
         "thumbnail": "https://codehs.com/uploads/ac272eaf1006d55c7a2265c5588aaf82",
         "category": "Arcade",
         "type": "link",
-        "content": "https://n64kart-16573770.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/mario-kart-n64.html"
     },
     {
         "id": "metal-gear-solid",
@@ -805,7 +806,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/599.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://metalgearsolid-16545370.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/metal-gear-solid.html"
     },
     {
         "id": "minecraft-1-12-2",
@@ -813,7 +814,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/182.png",
         "category": "Sandbox",
         "type": "link",
-        "content": "https://minecraft1122-16543848.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/minecraft-1-12-2.html"
     },
     {
         "id": "minesweeper-mania",
@@ -821,7 +822,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/313.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://minesweepermania-16545377.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/minesweeper-mania.html"
     },
     {
         "id": "minesweeper-plus",
@@ -829,7 +830,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/604.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://minesweeperplus-16545380.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/minesweeper-plus.html"
     },
     {
         "id": "mob-control-html5",
@@ -837,7 +838,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/22.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://mobcontrolhtml5-16545385.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/mob-control-html5.html"
     },
     {
         "id": "monkey-mart",
@@ -845,7 +846,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/57.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://monkeymart-16545392.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/monkey-mart.html"
     },
     {
         "id": "monster-tracks",
@@ -853,7 +854,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/36.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://monstertracks-16545395.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/monster-tracks.html"
     },
     {
         "id": "motox3m-pool-party",
@@ -861,7 +862,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/124.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://motox3mpoolparty-16544181.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/motox3m-pool-party.html"
     },
     {
         "id": "mowing-sim",
@@ -869,7 +870,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/584-a.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://mowing-sim-16568564.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/mowing-sim.html"
     },
     {
         "id": "my-teardrop",
@@ -877,7 +878,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/540.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://myteardrop-16545397.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/my-teardrop.html"
     },
     {
         "id": "motorbike-simulator",
@@ -885,7 +886,7 @@
         "thumbnail": "https://codehs.com/uploads/2d91e85c576d249fa083c6ac45365d7b",
         "category": "Racing",
         "type": "link",
-        "content": "https://html5.gamedistribution.com/rvvASMiM/f7fcef09c2ca4c7286fec95aef502e31/index.html?timestamp=-62135596800&countryCode=en&siteLocale=en&locale=en&gd_sdk_referrer_url=https%3A%2F%2Fkizi.com%2Fgames%2Fmotorbike-simulator&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2tpemkuY29tL2dhbWVzL21vdG9yYmlrZS1zaW11bGF0b3IiLCJwYXJlbnREb21haW4iOiJraXppLmNvbSIsInRvcERvbWFpbiI6ImtpemkuY29tIiwiaGFzSW1wcmVzc2lvbiI6ZmFsc2UsImxvYWRlckVuYWJsZWQiOnRydWUsImhvc3QiOiJodG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbSIsInZlcnNpb24iOiIxLjUuMTgifQ%253D%253D"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/motorbike-simulator.html"
     },
     {
         "id": "n-gon",
@@ -893,7 +894,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/180.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://n-gon-16545400.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/n-gon.html"
     },
     {
         "id": "nba-hangtime-n64",
@@ -901,7 +902,7 @@
         "thumbnail": "https://codehs.com/uploads/b07983c4d9496cb9cd711fcf535d3414",
         "category": "Sports",
         "type": "link",
-        "content": "https://nba-hangtime-n64-16575006.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/nba-hangtime-n64.html"
     },
     {
         "id": "ninja-vs-evil-corp",
@@ -909,7 +910,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/101.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://ninjavsevilcorp-16545406.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/ninja-vs-evil-corp.html"
     },
     {
         "id": "nubbys-number-factory",
@@ -917,7 +918,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/517.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://nubbysnumberfactory-16545410.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/nubbys-number-factory.html"
     },
     {
         "id": "oshi-oshi-punch",
@@ -925,7 +926,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/516.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://oshioshipunch-16545413.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oshi-oshi-punch.html"
     },
     {
         "id": "ovo",
@@ -933,7 +934,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/1.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://www.hoodamath.com/mobile/games/ovo/game.html?nocheckorient=1"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/ovo.html"
     },
     {
         "id": "ovo-3",
@@ -941,7 +942,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/3.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://ovo3-16545415.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/ovo-3.html"
     },
     {
         "id": "papas-pizzeria",
@@ -949,7 +950,7 @@
         "thumbnail": "https://codehs.com/uploads/82a3a1055637a5e0be826393b0bf3148",
         "category": "Arcade",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/papaspizzeria"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/papas-pizzeria.html"
     },
     {
         "id": "pacman-super-fast",
@@ -957,7 +958,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/515.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://pacmansuperfast-16545427.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/pacman-super-fast.html"
     },
     {
         "id": "pacman-world",
@@ -965,7 +966,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/592.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://pacmanworld-16545425.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/pacman-world.html"
     },
     {
         "id": "paper-io-2",
@@ -973,7 +974,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/102.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://paperio2-16545430.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/paper-io-2.html"
     },
     {
         "id": "people-playground",
@@ -981,7 +982,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/194.png",
         "category": "Sandbox",
         "type": "link",
-        "content": "https://peopleplayground-16545433.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/people-playground.html"
     },
     {
         "id": "plinko",
@@ -989,7 +990,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/544.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://plinko-16545442.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/plinko.html"
     },
     {
         "id": "pokeyball",
@@ -997,7 +998,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/326.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://pokeyball-16568257.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/pokeyball.html"
     },
     {
         "id": "pokemon-emerald",
@@ -1005,7 +1006,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/506.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://pokemonemerald-16545454.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/pokemon-emerald.html"
     },
     {
         "id": "pokemon-red",
@@ -1013,7 +1014,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/505.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://pokemonred-16545458.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/pokemon-red.html"
     },
     {
         "id": "portaboy",
@@ -1021,7 +1022,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/514.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://portaboy-16568258.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/portaboy.html"
     },
     {
         "id": "pottery-master",
@@ -1029,7 +1030,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/574.png",
         "category": "Sandbox",
         "type": "link",
-        "content": "https://potterymaster-16545542.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/pottery-master.html"
     },
     {
         "id": "rainbowobby",
@@ -1037,7 +1038,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/307.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://rainbowobby-16568269.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/rainbowobby.html"
     },
     {
         "id": "recoil",
@@ -1045,7 +1046,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/546.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://recoil-16568278.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/recoil.html"
     },
     {
         "id": "retrobowl",
@@ -1053,7 +1054,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/33.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://retrobowl-16568286.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/retrobowl.html"
     },
     {
         "id": "retrobowlcollege",
@@ -1061,7 +1062,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/34.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://retrobowlcollege-16568287.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/retrobowlcollege.html"
     },
     {
         "id": "rollyvortex",
@@ -1069,7 +1070,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/208.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://rollyvortex-16568399.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/rollyvortex.html"
     },
     {
         "id": "run-2",
@@ -1077,7 +1078,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/176.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://www.hoodamath.com/games/run2.html#gsc.tab=0"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/run-2.html"
     },
     {
         "id": "run-3",
@@ -1085,7 +1086,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/177.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://run3-16568401.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/run-3.html"
     },
     {
         "id": "stickman-swing",
@@ -1093,7 +1094,7 @@
         "thumbnail": "https://codehs.com/uploads/7a6b6c4e81e3f61e26ec5b2dd4acab9b",
         "category": "Arcade",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/stickman-hook"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/stickman-swing.html"
     },
     {
         "id": "super-meat-boy",
@@ -1101,7 +1102,7 @@
         "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/aa/SuperMeatBoy_cover.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/supermeatboy"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/super-meat-boy.html"
     },
     {
         "id": "shark-io",
@@ -1109,7 +1110,7 @@
         "thumbnail": "https://codehs.com/uploads/0dadd4e91acdde1f300ef6b42f3786b3",
         "category": "Strategy",
         "type": "link",
-        "content": "https://gamepage.wouterplanet.com/sharkio"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/shark-io.html"
     },
     {
         "id": "sandtris",
@@ -1117,7 +1118,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/311.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://sandtris-16568411.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/sandtris.html"
     },
     {
         "id": "shapezio",
@@ -1125,7 +1126,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/595.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://shapezio-16568414.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/shapezio.html"
     },
     {
         "id": "shipo-io",
@@ -1133,7 +1134,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/306.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://shipo-io-16568417.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/shipo-io.html"
     },
     {
         "id": "skyriders",
@@ -1141,7 +1142,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/576.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://skyriders-16568425.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/skyriders.html"
     },
     {
         "id": "slice-it-all",
@@ -1149,7 +1150,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/128.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://slice-it-all-16568427.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/slice-it-all.html"
     },
     {
         "id": "slime-io",
@@ -1157,7 +1158,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/327.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://slime-io-16568430.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/slime-io.html"
     },
     {
         "id": "slime-rancher",
@@ -1165,7 +1166,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/591.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://slime-rancher-16568429.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/slime-rancher.html"
     },
     {
         "id": "slowroads",
@@ -1173,7 +1174,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/369.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://slowroads-16568433.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/slowroads.html"
     },
     {
         "id": "snow-rider-3d",
@@ -1181,7 +1182,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/119.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://www.hoodamath.com/mobile/games/snow-rider-3d/game.html?nocheckorient=1"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/snow-rider-3d.html"
     },
     {
         "id": "sonic-2",
@@ -1189,7 +1190,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/549.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://sonic2-16568473.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/sonic-2.html"
     },
     {
         "id": "sonicexe",
@@ -1197,7 +1198,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/598.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://sonicexe-16568479.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/sonicexe.html"
     },
     {
         "id": "sonicexeoriginal",
@@ -1205,7 +1206,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/606.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://sonicexeoriginal-16568488.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/sonicexeoriginal.html"
     },
     {
         "id": "soundboard",
@@ -1213,7 +1214,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/179.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://soundboard-16544819.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/soundboard.html"
     },
     {
         "id": "space-waves",
@@ -1221,7 +1222,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/117.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://space-waves-16568490.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/space-waves.html"
     },
     {
         "id": "spacebar-clicker",
@@ -1229,7 +1230,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/473.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://spacebar-clicker-16568494.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/spacebar-clicker.html"
     },
     {
         "id": "spiral-roll",
@@ -1237,7 +1238,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/349.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://spiral-roll-16568497.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/spiral-roll.html"
     },
     {
         "id": "spongebob-landho",
@@ -1245,7 +1246,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/526.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://spongebob-landho-16568512.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/spongebob-landho.html"
     },
     {
         "id": "spongebob-run",
@@ -1253,7 +1254,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/527.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://spongebob-run-16568517.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/spongebob-run.html"
     },
     {
         "id": "spongebob-sponge-stacker",
@@ -1261,7 +1262,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/529.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://spongebob-sponge-stacker-16568515.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/spongebob-sponge-stacker.html"
     },
     {
         "id": "sprunki",
@@ -1269,7 +1270,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/9.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://sprunki-16568520.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/sprunki.html"
     },
     {
         "id": "steal-a-brainrot",
@@ -1277,7 +1278,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/479.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://steal-a-brainrot-16568525.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/steal-a-brainrot.html"
     },
     {
         "id": "stickman-climb",
@@ -1285,7 +1286,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/373.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://stickman-climb-16568548.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/stickman-climb.html"
     },
     {
         "id": "subway-surfers",
@@ -1293,7 +1294,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/132.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://cdn-ninove.wouterplanet.com/winter-holiday/winterholiday.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/subway-surfers.html"
     },
     {
         "id": "super-mario-bros",
@@ -1301,7 +1302,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/508.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://super-mario-bros-16568586.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/super-mario-bros.html"
     },
     {
         "id": "supermario64",
@@ -1309,7 +1310,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/588.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://supermario64-16568582.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/supermario64.html"
     },
     {
         "id": "swordfight",
@@ -1317,7 +1318,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/513.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://swordfight-16568593.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/swordfight.html"
     },
     {
         "id": "2048",
@@ -1325,7 +1326,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/114.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://www.hoodamath.com/mobile/games/2048-game/game.html?nocheckorient=1"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/2048.html"
     },
     {
         "id": "temple-run-2",
@@ -1333,7 +1334,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/10.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://temple-run2-16568598.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/temple-run-2.html"
     },
     {
         "id": "the-deadseat",
@@ -1341,7 +1342,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/458.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://the-deadseat-16568614.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/the-deadseat.html"
     },
     {
         "id": "the-man-from-the-window",
@@ -1349,7 +1350,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/459.png",
         "category": "Horror",
         "type": "link",
-        "content": "https://themanfromthewindow-16544905.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/the-man-from-the-window.html"
     },
     {
         "id": "the-oregon-trail",
@@ -1357,7 +1358,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/586.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://the-oregon-trail-16568622.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/the-oregon-trail.html"
     },
     {
         "id": "they-are-coming",
@@ -1365,7 +1366,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/348.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://they-are-coming-16568624.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/they-are-coming.html"
     },
     {
         "id": "time-shooter-3",
@@ -1373,7 +1374,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/201.png",
         "category": "Shooter",
         "type": "link",
-        "content": "https://time-shooter3-16568630.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/time-shooter-3.html"
     },
     {
         "id": "tomodachi-collection",
@@ -1381,7 +1382,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/510.png",
         "category": "Sandbox",
         "type": "link",
-        "content": "https://tomodachi-collection-16568634.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/tomodachi-collection.html"
     },
     {
         "id": "traffic-rider",
@@ -1389,7 +1390,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/580.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://traffic-rider-16568645.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/traffic-rider.html"
     },
     {
         "id": "trivia-crack",
@@ -1397,7 +1398,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/163.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://trivia-crack-16568654.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/trivia-crack.html"
     },
     {
         "id": "undertale",
@@ -1405,7 +1406,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/456.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://undertale-16568667.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/undertale.html"
     },
     {
         "id": "vex-x3m-2",
@@ -1413,7 +1414,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/56.png",
         "category": "Racing",
         "type": "link",
-        "content": "https://vex-x3m-2-16568719.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/vex-x3m-2.html"
     },
     {
         "id": "water-color-sort",
@@ -1421,7 +1422,7 @@
         "thumbnail": "https://codehs.com/uploads/b5d61ff35c4388c6e3971189a2015161",
         "category": "Strategy",
         "type": "link",
-        "content": "https://html5.gamedistribution.com/rvvASMiM/cbf5f19fb8584e1795518d0f8c5becb1/index.html?timestamp=-62135596800&countryCode=en&siteLocale=en&locale=en&gd_sdk_referrer_url=https%3A%2F%2Fkizi.com%2Fgames%2Fwater-color-sort&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2tpemkuY29tL2dhbWVzL3dhdGVyLWNvbG9yLXNvcnQiLCJwYXJlbnREb21haW4iOiJraXppLmNvbSIsInRvcERvbWFpbiI6ImtpemkuY29tIiwiaGFzSW1wcmVzc2lvbiI6ZmFsc2UsImxvYWRlckVuYWJsZWQiOnRydWUsImhvc3QiOiJodG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbSIsInZlcnNpb24iOiIxLjUuMTgifQ%253D%253D"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/water-color-sort.html"
     },
     {
         "id": "wordle",
@@ -1429,15 +1430,15 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/112.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://www.hoodamath.com/mobile/games/guess-word/game.html?nocheckorient=1"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/wordle.html"
     },
     {
         "id": "war-the-knights",
         "name": "War The Knights",
-        "thumbnail": "https://codehs.com/uploads/c2d8f1f446d107d223116965c6fd98ac",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/284.png",
         "category": "Strategy",
         "type": "link",
-        "content": "https://wartheknights-16543347.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/war-the-knights.html"
     },
     {
         "id": "waterworks",
@@ -1445,7 +1446,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/594.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://waterworks-16568723.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/waterworks.html"
     },
     {
         "id": "webfishing",
@@ -1453,7 +1454,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/423.png",
         "category": "Sports",
         "type": "link",
-        "content": "https://webfishing-16568724.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/webfishing.html"
     },
     {
         "id": "yume-nikki",
@@ -1461,7 +1462,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/433.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://yume-nikki-16568732.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/yume-nikki.html"
     },
     {
         "id": "zelda-majoras-mask",
@@ -1469,7 +1470,7 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/612.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://zelda-majoras-mask-16568617.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/zelda-majoras-mask.html"
     },
     {
         "id": "zelda-ocarina-of-time",
@@ -1477,6 +1478,6 @@
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/611.png",
         "category": "Adventure",
         "type": "link",
-        "content": "https://zelda-ocarina-of-time-16568620.codehs.me/index.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/zelda-ocarina-of-time.html"
     }
 ]
