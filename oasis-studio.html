@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Studio - Web DAW</title>
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --bg-panel: #141414;
+            --bg-lighter: #1f1f1f;
+            --primary: #0ea5e9;
+            --accent: #d946ef;
+            --grid-line: #333;
+            --text-main: #e5e5e5;
+            --border: #333;
+        }
+
+        * { box-sizing: border-box; user-select: none; }
+        
+        body {
+            margin: 0; font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark); color: var(--text-main);
+            height: 100vh; display: flex; flex-direction: column; overflow: hidden;
+        }
+
+        /* HEADER */
+        header {
+            height: 60px; background: var(--bg-panel); border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; padding: 0 20px; gap: 15px;
+            flex-shrink: 0; z-index: 10;
+        }
+        h1 { margin: 0; font-size: 1.1rem; font-weight: 800; color: var(--primary); letter-spacing: 1px; margin-right: 10px;}
+        
+        .btn {
+            background: var(--bg-lighter); border: 1px solid var(--border); color: #ccc;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem;
+            transition: 0.2s;
+        }
+        .btn:hover { background: #333; border-color: #555; }
+        .btn-primary { background: #0f766e; border-color: #115e59; color: white; }
+        .btn-primary:hover { background: #115e59; }
+        .btn-record.active { background: #dc2626; animation: pulse 1.5s infinite; color: white; }
+        
+        .control-group { display: flex; align-items: center; gap: 5px; border-right: 1px solid #333; padding-right: 15px; height: 60%; }
+        input[type="number"] { background: #000; border: 1px solid #444; color: white; width: 50px; padding: 4px; border-radius: 3px; }
+
+        /* MAIN WORKSPACE */
+        .workspace {
+            flex: 1; display: flex; overflow: hidden; position: relative;
+            flex-direction: column;
+        }
+
+        /* SCROLLABLE AREA */
+        .scroll-container {
+            flex: 1; overflow-y: auto; display: flex;
+            scrollbar-width: thin; scrollbar-color: #444 #111;
+        }
+        
+        .track-headers {
+            width: 240px; flex-shrink: 0; background: var(--bg-panel);
+            border-right: 1px solid var(--border);
+            position: sticky; left: 0; z-index: 5;
+        }
+
+        .sequencer-grid-container {
+            flex: 1; overflow-x: auto; background: var(--bg-dark);
+        }
+
+        /* TRACKS */
+        .track-row { height: 90px; display: flex; border-bottom: 1px solid var(--border); }
+        
+        .t-header {
+            width: 240px; padding: 10px; background: var(--bg-panel);
+            display: flex; flex-direction: column; justify-content: center; gap: 5px;
+            border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+            height: 90px;
+        }
+        .t-top { display: flex; justify-content: space-between; align-items: center; }
+        .t-name { font-weight: bold; font-size: 0.85rem; color: #fff; }
+        .t-controls { display: flex; gap: 4px; }
+        .mini-btn { padding: 2px 6px; font-size: 0.7rem; background: #222; border: 1px solid #444; color: #aaa; cursor: pointer; }
+        .mini-btn:hover { background: #444; color: white; }
+        .mini-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+        
+        .t-lane {
+            display: flex; height: 90px; border-bottom: 1px solid #222; width: max-content;
+        }
+
+        /* GRID STEPS */
+        .step {
+            width: 30px; height: 100%; border-right: 1px solid #222; 
+            background: transparent; cursor: pointer; position: relative;
+        }
+        .step:nth-child(4n) { border-right: 1px solid #444; } 
+        .step:nth-child(16n) { border-right: 1px solid #666; } 
+        
+        .step.active { background: var(--primary); opacity: 0.8; }
+        .step.active-synth { background: var(--accent); opacity: 0.8; }
+        .step.current { box-shadow: inset 0 0 0 2px white; z-index: 2; }
+
+        /* BOTTOM FX PANEL */
+        .fx-panel {
+            height: 100px; background: #0f0f10; border-top: 1px solid var(--border);
+            display: flex; align-items: center; padding: 0 30px; gap: 40px;
+            flex-shrink: 0;
+        }
+        .fx-group { display: flex; flex-direction: column; gap: 8px; width: 150px; }
+        .fx-label { font-size: 0.75rem; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        input[type="range"] { width: 100%; accent-color: var(--primary); height: 4px; cursor: pointer; }
+
+        /* PIANO ROLL MODAL */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 100; display: none;
+            justify-content: center; align-items: center; backdrop-filter: blur(4px);
+        }
+        .modal-overlay.open { display: flex; }
+        
+        .piano-roll {
+            width: 90vw; height: 80vh; background: #18181b; border: 1px solid #444;
+            display: flex; flex-direction: column; border-radius: 6px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .pr-header { padding: 15px; background: #222; display: flex; justify-content: space-between; border-bottom: 1px solid #333; }
+        
+        .pr-body { flex: 1; display: flex; overflow: hidden; }
+        .pr-keys { width: 60px; overflow-y: hidden; background: #eee; border-right: 1px solid #999; flex-shrink: 0; }
+        .pr-key { height: 20px; border-bottom: 1px solid #ccc; font-size: 9px; display: flex; align-items: center; justify-content: flex-end; padding-right: 4px; color: #555; }
+        .pr-key.black { background: #333; color: #ccc; border-color: #222; }
+
+        .pr-grid-wrapper { flex: 1; overflow: auto; position: relative; background: #111; }
+        .pr-grid { 
+            position: relative; 
+            /* Performance: use hardcoded gradient background instead of thousands of divs */
+            background-image: linear-gradient(#222 1px, transparent 1px), linear-gradient(90deg, #222 1px, transparent 1px);
+            background-size: 100% 20px, 30px 100%; 
+        }
+        
+        .note-block {
+            position: absolute; height: 18px; width: 28px; background: var(--accent);
+            border: 1px solid rgba(255,255,255,0.5); border-radius: 2px; cursor: pointer;
+            z-index: 10;
+        }
+        .note-block:hover { background: #f0abfc; }
+
+        /* START SCREEN */
+        #start-screen {
+            position: fixed; top:0; left:0; width:100%; height:100%; background: #050505;
+            z-index: 999; display: flex; flex-direction: column; justify-content: center; align-items: center;
+        }
+        
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div id="start-screen">
+        <h1 style="font-size: 3rem; margin-bottom: 10px;">OASIS STUDIO 2.0</h1>
+        <p style="color: #666; margin-bottom: 30px;">Polyphonic Web Audio Workstation</p>
+        <button class="btn btn-primary" style="padding: 15px 30px; font-size: 1.2rem;" onclick="initOasis()">Initialize Oasis</button>
+    </div>
+
+    <header>
+        <h1>OASIS</h1>
+        <div class="control-group">
+            <button class="btn" id="playBtn" onclick="togglePlay()">▶ Play</button>
+            <button class="btn" onclick="stop()">■ Stop</button>
+            <button class="btn btn-record" id="recBtn" onclick="toggleRecord()">● Export</button>
+        </div>
+        
+        <div class="control-group">
+            <label style="font-size:0.8rem; color:#888;">BPM</label>
+            <input type="number" value="120" onchange="updateBpm(this.value)">
+        </div>
+
+        <div class="control-group">
+            <label style="font-size:0.8rem; color:#888;">Measures</label>
+            <input type="number" value="1" min="1" max="8" onchange="updateMeasures(this.value)">
+        </div>
+
+        <div class="control-group" style="border:none;">
+            <button class="btn" onclick="addTrack('drum')">+ Drums</button>
+            <button class="btn" onclick="addTrack('synth')">+ Synth</button>
+            <button class="btn" onclick="addTrack('piano')">+ Piano</button>
+            <button class="btn" onclick="addTrack('sampler')">+ Audio File</button>
+        </div>
+    </header>
+
+    <div class="workspace">
+        <div class="scroll-container" id="mainScroll">
+            <div class="track-headers" id="trackHeaders">
+                <!-- Headers Injected Here -->
+            </div>
+            <div class="sequencer-grid-container" id="sequencerContainer">
+                <div id="sequencerLanes">
+                    <!-- Lanes Injected Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fx-panel">
+        <div style="font-weight:bold; color:white; width: 80px;">MASTER FX</div>
+        
+        <div class="fx-group">
+            <div class="t-top">
+                <span class="fx-label">Reverb Mix</span>
+                <span class="fx-label" id="rvb-val">20%</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.01" value="0.2" oninput="setReverb(this.value)">
+        </div>
+
+        <div class="fx-group">
+            <div class="t-top">
+                <span class="fx-label">Delay Time</span>
+                <span class="fx-label" id="dly-time-val">0.3s</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.05" value="0.3" oninput="setDelayTime(this.value)">
+        </div>
+
+        <div class="fx-group">
+            <div class="t-top">
+                <span class="fx-label">Delay Mix</span>
+                <span class="fx-label" id="dly-mix-val">0%</span>
+            </div>
+            <input type="range" min="0" max="1" step="0.01" value="0" oninput="setDelayMix(this.value)">
+        </div>
+    </div>
+
+    <!-- PIANO ROLL -->
+    <div class="modal-overlay" id="pianoModal">
+        <div class="piano-roll">
+            <div class="pr-header">
+                <span style="color:white; font-weight:bold;" id="prLabel">Editing Track</span>
+                <button class="btn" onclick="closePiano()">Done</button>
+            </div>
+            <div class="pr-body">
+                <div class="pr-keys" id="prKeys">
+                    <!-- Generated JS -->
+                </div>
+                <div class="pr-grid-wrapper">
+                    <div class="pr-grid" id="prGrid">
+                        <!-- Generated JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hidden Input -->
+    <input type="file" id="fileUpload" style="display:none;" accept="audio/*">
+
+<script>
+/**
+ * OASIS STUDIO ENGINE 2.0
+ * Fixes: Polyphony, Audio Safety Limiter, Render Performance
+ */
+
+// AUDIO CONTEXT
+let ctx;
+let masterGain, masterLimiter;
+let reverbNode, reverbGain;
+let delayNode, delayGain, delayFeedback;
+let recorderDest, mediaRecorder;
+let recordedChunks = [];
+
+// STATE
+let isPlaying = false;
+let currentStep = 0;
+let bpm = 120;
+let measures = 1; 
+let stepsPerMeasure = 16;
+let totalSteps = 16;
+let nextNoteTime = 0.0;
+let timerID;
+let tracks = [];
+let editTrackId = null;
+
+// CONSTANTS
+const NOTE_NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+const ROW_COUNT = 24; // 2 Octaves
+const BASE_FREQ_C4 = 261.63;
+
+async function initOasis() {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    ctx = new AudioContext();
+    await ctx.resume();
+
+    // MASTER CHAIN
+    masterGain = ctx.createGain();
+    masterGain.gain.value = 0.6; // Reduced default gain for safety
+
+    // Safety Limiter (Hard compression to prevent explosion)
+    masterLimiter = ctx.createDynamicsCompressor();
+    masterLimiter.threshold.value = -3; // Kick in early if loud
+    masterLimiter.knee.value = 0;
+    masterLimiter.ratio.value = 20; // Hard limit
+    masterLimiter.attack.value = 0.001;
+
+    // FX SENDS
+    reverbNode = ctx.createConvolver();
+    reverbNode.buffer = createReverbImpulse(2.0);
+    reverbGain = ctx.createGain();
+    reverbGain.gain.value = 0.2;
+
+    delayNode = ctx.createDelay();
+    delayNode.delayTime.value = 0.3;
+    delayFeedback = ctx.createGain();
+    delayFeedback.gain.value = 0.4;
+    delayGain = ctx.createGain();
+    delayGain.gain.value = 0.0;
+
+    delayNode.connect(delayFeedback);
+    delayFeedback.connect(delayNode);
+    delayNode.connect(delayGain);
+
+    // ROUTING: Tracks -> MasterGain -> FX -> Limiter -> Dest
+    masterGain.connect(masterLimiter);
+    masterGain.connect(reverbNode);
+    masterGain.connect(delayNode);
+
+    // Returns from FX
+    reverbNode.connect(reverbGain);
+    reverbGain.connect(masterLimiter);
+
+    delayGain.connect(masterLimiter);
+
+    // Final Output
+    masterLimiter.connect(ctx.destination);
+
+    // Recorder
+    recorderDest = ctx.createMediaStreamDestination();
+    masterLimiter.connect(recorderDest);
+
+    // DEFAULTS
+    addTrack('drum', 'Kick', { type:'kick' });
+    addTrack('drum', 'Snare', { type:'snare' });
+    addTrack('drum', 'HiHat', { type:'hat' });
+    addTrack('piano', 'E. Piano');
+    addTrack('synth', 'Bass');
+
+    document.getElementById('start-screen').style.display = 'none';
+    renderUI();
+}
+
+// --- AUDIO GENERATION ---
+
+function getFreq(row) {
+    // Row 12 = C4 approx center
+    return BASE_FREQ_C4 * Math.pow(2, (11 - row) / 12); 
+}
+
+function getPlaybackRate(row) {
+    return Math.pow(2, (11 - row) / 12);
+}
+
+// previewMode: If true, note is shorter and quieter
+function playNote(track, time, row, previewMode = false) {
+    if(track.muted) return;
+    
+    // Safety check: If time is way in the past, skip
+    if(time < ctx.currentTime - 0.1) return;
+
+    const gain = ctx.createGain();
+    // Lower volume for chords or preview
+    const vol = previewMode ? track.volume * 0.6 : track.volume; 
+    gain.gain.value = vol;
+    gain.connect(masterGain);
+
+    const dur = previewMode ? 0.1 : 0.2; // Shorter for preview
+
+    // DRUM ENGINES
+    if(track.type === 'drum') {
+        const rate = getPlaybackRate(row);
+        
+        if(track.params.type === 'kick') {
+            const osc = ctx.createOscillator();
+            osc.frequency.setValueAtTime(150 * rate, time);
+            osc.frequency.exponentialRampToValueAtTime(0.01, time + 0.5);
+            
+            const g = ctx.createGain();
+            g.gain.setValueAtTime(1, time);
+            g.gain.exponentialRampToValueAtTime(0.001, time + 0.5);
+            
+            osc.connect(g).connect(gain);
+            osc.start(time); osc.stop(time+0.5);
+        } 
+        else if(track.params.type === 'snare') {
+            const osc = ctx.createOscillator();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(200 * rate, time);
+            const g1 = ctx.createGain();
+            g1.gain.setValueAtTime(0.5, time);
+            g1.gain.exponentialRampToValueAtTime(0.01, time+0.2);
+            osc.connect(g1).connect(gain);
+            osc.start(time); osc.stop(time+0.2);
+
+            const noise = createNoiseBuffer();
+            const src = ctx.createBufferSource();
+            src.buffer = noise;
+            src.playbackRate.value = rate;
+            const f = ctx.createBiquadFilter();
+            f.type = 'highpass'; f.frequency.value = 1000 * rate;
+            const g2 = ctx.createGain();
+            g2.gain.setValueAtTime(0.8, time);
+            g2.gain.exponentialRampToValueAtTime(0.01, time+0.3);
+            src.connect(f).connect(g2).connect(gain);
+            src.start(time); src.stop(time+0.3);
+        }
+        else if(track.params.type === 'hat') {
+            const noise = createNoiseBuffer();
+            const src = ctx.createBufferSource();
+            src.buffer = noise;
+            src.playbackRate.value = rate * 1.5; 
+            const f = ctx.createBiquadFilter();
+            f.type = 'highpass'; f.frequency.value = 6000;
+            const g = ctx.createGain();
+            g.gain.setValueAtTime(0.6, time);
+            g.gain.exponentialRampToValueAtTime(0.001, time+0.08);
+            src.connect(f).connect(g).connect(gain);
+            src.start(time); src.stop(time+0.1);
+        }
+    }
+    
+    // SYNTH ENGINES
+    else if(track.type === 'synth') {
+        const freq = getFreq(row);
+        const osc = ctx.createOscillator();
+        osc.type = 'sawtooth';
+        osc.frequency.value = freq;
+        
+        const filter = ctx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(200, time);
+        filter.frequency.exponentialRampToValueAtTime(3000, time + 0.05);
+        filter.frequency.exponentialRampToValueAtTime(200, time + 0.4);
+        
+        const amp = ctx.createGain();
+        amp.gain.setValueAtTime(0, time);
+        amp.gain.linearRampToValueAtTime(1, time+0.02);
+        amp.gain.exponentialRampToValueAtTime(0.001, time+dur+0.3);
+        
+        osc.connect(filter).connect(amp).connect(gain);
+        osc.start(time); osc.stop(time+dur+0.4);
+    }
+
+    else if(track.type === 'piano') {
+        const freq = getFreq(row);
+        const carrier = ctx.createOscillator();
+        carrier.type = 'sine';
+        carrier.frequency.value = freq;
+        
+        const mod = ctx.createOscillator();
+        mod.type = 'sine';
+        mod.frequency.value = freq * 4; 
+        const modGain = ctx.createGain();
+        modGain.gain.value = freq * 2; 
+        modGain.gain.exponentialRampToValueAtTime(0.01, time + 0.5);
+        
+        mod.connect(modGain).connect(carrier.frequency);
+        
+        const amp = ctx.createGain();
+        amp.gain.setValueAtTime(0, time);
+        amp.gain.linearRampToValueAtTime(1, time+0.02);
+        amp.gain.exponentialRampToValueAtTime(0.001, time+1.0);
+        
+        carrier.connect(amp).connect(gain);
+        carrier.start(time); carrier.stop(time+1.2);
+        mod.start(time); mod.stop(time+1.2);
+    }
+
+    else if(track.type === 'sampler' && track.buffer) {
+        const rate = getPlaybackRate(row);
+        const src = ctx.createBufferSource();
+        src.buffer = track.buffer;
+        src.playbackRate.value = rate;
+        src.connect(gain);
+        src.start(time);
+    }
+}
+
+// --- SEQUENCER CORE ---
+
+function scheduler() {
+    while(nextNoteTime < ctx.currentTime + 0.1) {
+        scheduleStep(currentStep, nextNoteTime);
+        
+        const secondsPerBeat = 60.0 / bpm;
+        nextNoteTime += 0.25 * secondsPerBeat; 
+        
+        currentStep++;
+        if(currentStep >= totalSteps) currentStep = 0;
+    }
+    timerID = requestAnimationFrame(scheduler);
+}
+
+function scheduleStep(step, time) {
+    requestAnimationFrame(() => {
+        const old = document.querySelectorAll('.step.current');
+        old.forEach(o => o.classList.remove('current'));
+        
+        const currentCols = document.querySelectorAll(`.col-${step}`);
+        currentCols.forEach(c => c.classList.add('current'));
+        
+        // Scroll Logic
+        const container = document.getElementById('sequencerContainer');
+        const colWidth = 31;
+        const scrollPos = step * colWidth;
+        if(scrollPos > container.scrollLeft + container.clientWidth || scrollPos < container.scrollLeft) {
+            container.scrollLeft = scrollPos - 50; 
+        }
+    });
+
+    // Play Audio (POLYPHONIC SUPPORT)
+    tracks.forEach(t => {
+        // pattern[step] is now an Array of rows
+        const notes = t.pattern[step];
+        if(notes && notes.length > 0) {
+            notes.forEach(row => {
+                playNote(t, time, row, false);
+            });
+        }
+    });
+}
+
+function togglePlay() {
+    if(isPlaying) {
+        isPlaying = false;
+        cancelAnimationFrame(timerID);
+        document.getElementById('playBtn').innerText = "▶ Play";
+        document.querySelectorAll('.step.current').forEach(s => s.classList.remove('current'));
+    } else {
+        if(ctx.state === 'suspended') ctx.resume();
+        isPlaying = true;
+        currentStep = 0;
+        nextNoteTime = ctx.currentTime;
+        scheduler();
+        document.getElementById('playBtn').innerText = "|| Pause";
+    }
+}
+
+function stop() {
+    if(isPlaying) togglePlay();
+    currentStep = 0;
+    document.getElementById('sequencerContainer').scrollLeft = 0;
+}
+
+// --- TRACK DATA ---
+
+function addTrack(type, name, params={}) {
+    // Initialize with Array of Arrays for Polyphony
+    const emptyPattern = Array.from({length: totalSteps}, () => []);
+    
+    const t = {
+        id: Date.now() + Math.random(),
+        type: type,
+        name: name || type.toUpperCase(),
+        volume: 0.7,
+        muted: false,
+        params: params,
+        pattern: emptyPattern,
+        buffer: null
+    };
+    tracks.push(t);
+    renderUI();
+}
+
+// --- UI RENDERING & INTERACTION ---
+
+function renderUI() {
+    const headers = document.getElementById('trackHeaders');
+    const lanes = document.getElementById('sequencerLanes');
+    
+    headers.innerHTML = '';
+    lanes.innerHTML = '';
+
+    tracks.forEach((t, idx) => {
+        // Header
+        const h = document.createElement('div');
+        h.className = 't-header';
+        h.innerHTML = `
+            <div class="t-top">
+                <span class="t-name">${t.name}</span>
+                <div class="t-controls">
+                    ${t.type === 'sampler' ? `<button class="mini-btn" onclick="uploadSample(${idx})">📂</button>` : ''}
+                    <button class="mini-btn" onclick="openPiano(${idx})">✏️</button>
+                    <button class="mini-btn ${t.muted ? 'active':''}" onclick="toggleMute(${idx})">M</button>
+                    <button class="mini-btn" style="color:red" onclick="deleteTrack(${idx})">×</button>
+                </div>
+            </div>
+            <input type="range" min="0" max="1" step="0.1" value="${t.volume}" oninput="tracks[${idx}].volume=this.value">
+        `;
+        headers.appendChild(h);
+
+        // Lane
+        const l = document.createElement('div');
+        l.className = 't-lane';
+        
+        for(let i=0; i<totalSteps; i++) {
+            const s = document.createElement('div');
+            const hasNotes = t.pattern[i] && t.pattern[i].length > 0;
+            s.className = `step col-${i} ${hasNotes ? (t.type==='drum'?'active':'active-synth') : ''}`;
+            
+            // Main view simple toggle
+            s.onclick = () => toggleStep(idx, i);
+            
+            l.appendChild(s);
+        }
+        lanes.appendChild(l);
+    });
+}
+
+function toggleStep(trackIdx, stepIdx) {
+    const t = tracks[trackIdx];
+    // If notes exist, clear them. If empty, add default note.
+    if(t.pattern[stepIdx].length > 0) {
+        t.pattern[stepIdx] = [];
+    } else {
+        // Default Pitch
+        const defaultRow = 11; 
+        t.pattern[stepIdx] = [defaultRow];
+        playNote(t, ctx.currentTime, defaultRow, true); // Preview
+    }
+    renderUI();
+}
+
+function updateMeasures(val) {
+    const m = parseInt(val);
+    if(m < 1) return;
+    measures = m;
+    totalSteps = measures * stepsPerMeasure;
+    
+    // Resize patterns
+    tracks.forEach(t => {
+        const oldLen = t.pattern.length;
+        if(totalSteps > oldLen) {
+            // Add new empty arrays
+            for(let i=0; i<(totalSteps-oldLen); i++) t.pattern.push([]);
+        } else {
+            // Truncate
+            t.pattern.length = totalSteps;
+        }
+    });
+    renderUI();
+}
+
+// --- PIANO ROLL (OPTIMIZED) ---
+
+function openPiano(trackIdx) {
+    editTrackId = trackIdx;
+    const t = tracks[trackIdx];
+    document.getElementById('prLabel').innerText = "Editing: " + t.name;
+    document.getElementById('pianoModal').classList.add('open');
+    renderPianoKeys();
+    
+    // Only render the note blocks on open
+    renderPianoNotes();
+}
+
+function closePiano() {
+    document.getElementById('pianoModal').classList.remove('open');
+    editTrackId = null;
+    renderUI(); 
+}
+
+function renderPianoKeys() {
+    const kContainer = document.getElementById('prKeys');
+    kContainer.innerHTML = '';
+    for(let r=0; r<ROW_COUNT; r++) {
+        const div = document.createElement('div');
+        div.className = `pr-key ${isBlackKey(r) ? 'black' : 'white'}`;
+        div.innerText = getNoteName(r);
+        kContainer.appendChild(div);
+    }
+}
+
+// Render ONLY the note blocks (not the grid background)
+function renderPianoNotes() {
+    const g = document.getElementById('prGrid');
+    g.innerHTML = ''; // Clear existing notes
+    
+    // Set dimensions
+    g.style.width = (totalSteps * 30) + 'px';
+    g.style.height = (ROW_COUNT * 20) + 'px';
+
+    const t = tracks[editTrackId];
+
+    // Draw notes
+    t.pattern.forEach((notes, step) => {
+        notes.forEach(row => {
+            addNoteElement(g, step, row);
+        });
+    });
+
+    // Attach click handler to GRID (background) only once
+    // Note: we remove old listeners by simple replacement (lazy way) or just checking if attached.
+    // For simplicity in this single-file script, we re-assign `onmousedown`.
+    g.onmousedown = handleGridClick;
+}
+
+function addNoteElement(container, step, row) {
+    const block = document.createElement('div');
+    block.className = 'note-block';
+    block.style.left = (step * 30) + 'px';
+    block.style.top = (row * 20) + 'px'; 
+    block.dataset.step = step;
+    block.dataset.row = row;
+    
+    // Click to remove
+    block.onmousedown = (e) => {
+        e.stopPropagation(); // Don't trigger grid add
+        removeNote(step, row, block);
+    };
+    
+    container.appendChild(block);
+}
+
+function handleGridClick(e) {
+    if(!editTrackId && editTrackId !== 0) return;
+    const g = document.getElementById('prGrid');
+    const rect = g.getBoundingClientRect();
+    
+    // Calculate pos relative to the scrolled content
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const step = Math.floor(x / 30);
+    const row = Math.floor(y / 20);
+    
+    if(step >= 0 && step < totalSteps && row >= 0 && row < ROW_COUNT) {
+        addNote(step, row);
+    }
+}
+
+function addNote(step, row) {
+    const t = tracks[editTrackId];
+    // Check if already exists
+    if(!t.pattern[step].includes(row)) {
+        t.pattern[step].push(row);
+        const g = document.getElementById('prGrid');
+        addNoteElement(g, step, row);
+        playNote(t, ctx.currentTime, row, true); // Preview
+    }
+}
+
+function removeNote(step, row, element) {
+    const t = tracks[editTrackId];
+    const idx = t.pattern[step].indexOf(row);
+    if(idx > -1) {
+        t.pattern[step].splice(idx, 1);
+        element.remove(); // DOM removal only, no full re-render
+    }
+}
+
+// --- UTILS & FX ---
+
+function setReverb(val) {
+    reverbGain.gain.value = parseFloat(val);
+    document.getElementById('rvb-val').innerText = Math.round(val*100) + '%';
+}
+function setDelayTime(val) {
+    delayNode.delayTime.rampToValueAtTime(parseFloat(val), ctx.currentTime + 0.1);
+    document.getElementById('dly-time-val').innerText = val + 's';
+}
+function setDelayMix(val) {
+    delayGain.gain.value = parseFloat(val);
+    document.getElementById('dly-mix-val').innerText = Math.round(val*100) + '%';
+}
+function toggleMute(idx) { tracks[idx].muted = !tracks[idx].muted; renderUI(); }
+function deleteTrack(idx) { tracks.splice(idx, 1); renderUI(); }
+function updateBpm(v) { bpm = parseInt(v); }
+
+function createReverbImpulse(duration) {
+    const length = ctx.sampleRate * duration;
+    const imp = ctx.createBuffer(2, length, ctx.sampleRate);
+    for(let c=0; c<2; c++){
+        const d = imp.getChannelData(c);
+        for(let i=0; i<length; i++) d[i] = (Math.random()*2-1) * Math.pow(1-i/length, 3);
+    }
+    return imp;
+}
+function createNoiseBuffer() {
+    if(typeof whiteNoiseBuffer !== 'undefined') return whiteNoiseBuffer;
+    const b = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
+    const d = b.getChannelData(0);
+    for(let i=0; i<d.length; i++) d[i] = Math.random()*2-1;
+    return b;
+}
+function isBlackKey(row) {
+    const n = getNoteName(row);
+    return n.includes('#');
+}
+function getNoteName(row) {
+    const noteIndex = 23 - row; // 0 at bottom (C3)
+    const noteName = NOTE_NAMES[noteIndex % 12];
+    const octave = 3 + Math.floor(noteIndex / 12);
+    return noteName + octave;
+}
+
+// --- EXPORT ---
+function toggleRecord() {
+    const btn = document.getElementById('recBtn');
+    if(mediaRecorder && mediaRecorder.state === 'recording') {
+        mediaRecorder.stop();
+        btn.classList.remove('active');
+        btn.innerText = '● Export';
+    } else {
+        recordedChunks = [];
+        const mime = MediaRecorder.isTypeSupported('audio/webm') ? 'audio/webm' : '';
+        mediaRecorder = new MediaRecorder(recorderDest.stream, { mimeType: mime });
+        
+        mediaRecorder.ondataavailable = e => { if(e.data.size>0) recordedChunks.push(e.data); };
+        mediaRecorder.onstop = () => {
+            const blob = new Blob(recordedChunks, { type: 'audio/webm' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url; a.download = 'oasis_beat.webm';
+            a.click();
+        };
+        
+        mediaRecorder.start();
+        btn.classList.add('active');
+        btn.innerText = 'Stop';
+        if(!isPlaying) togglePlay();
+    }
+}
+
+function uploadSample(idx) {
+    const inp = document.getElementById('fileUpload');
+    inp.onchange = async (e) => {
+        const f = e.target.files[0];
+        const arr = await f.arrayBuffer();
+        const buf = await ctx.decodeAudioData(arr);
+        tracks[idx].buffer = buf;
+        tracks[idx].name = f.name.substring(0,10);
+        renderUI();
+    };
+    inp.click();
+}
+
+</script>
+</body>
+</html>
