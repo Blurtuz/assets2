@@ -417,6 +417,14 @@
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/excitebike-64.html"
     },
     {
+        "id": "fears-to-fathom",
+        "name": "Fears To Fathom",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/460.png",
+        "category": "Horror",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fears-to-fathom.html"
+    },
+    {
         "id": "fruit-ninja",
         "name": "Fruit Ninja",
         "thumbnail": "https://codehs.com/uploads/dbb3c70d032778ec429412a92aff3718",
