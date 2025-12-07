@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Typer: Zen Mode</title>
+    <style>
+        :root {
+            /* Dark Theme Palette */
+            --bg-color: #0b1120;      /* Darker Navy */
+            --card-color: #1e293b;    /* Slate */
+            --primary-color: #3b82f6; /* Blue */
+            --accent-color: #60a5fa;  /* Light Blue */
+            --error-color: #ef4444;   /* Red */
+            --text-color: #f1f5f9;    /* White-ish */
+            --dim-text: #64748b;      /* Muted Slate */
+            
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-mono: 'Courier Prime', 'Courier New', monospace;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 10%, #1e293b 0%, #0b1120 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+        }
+
+        .container {
+            background: var(--card-color);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 1100px;
+            max-width: 95%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 3rem;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: var(--dim-text);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        /* HUD */
+        .hud {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 12px;
+            border: 1px solid #334155;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .timer-badge {
+            font-variant-numeric: tabular-nums;
+            color: var(--accent-color);
+        }
+
+        /* Typing Area */
+        .typing-wrapper {
+            position: relative;
+            background: #020617;
+            border: 2px solid #334155;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: left;
+            cursor: text;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+            min-height: 250px;
+        }
+
+        .typing-wrapper.active {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.15), inset 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .quote-display {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            line-height: 1.7;
+            color: var(--dim-text);
+            user-select: none;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Character States */
+        .quote-display span {
+            position: relative;
+            transition: color 0.1s, text-shadow 0.1s;
+        }
+
+        .quote-display span.correct {
+            color: var(--text-color);
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+        }
+
+        .quote-display span.incorrect {
+            color: var(--error-color);
+            background-color: rgba(239, 68, 68, 0.15);
+            border-radius: 2px;
+        }
+
+        /* Cursor Effect */
+        .quote-display span.current {
+            border-left: 2px solid var(--primary-color);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: var(--primary-color); }
+        }
+
+        .input-field {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            cursor: default;
+            z-index: 5;
+        }
+
+        /* Overlays */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 17, 32, 0.95);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            transition: opacity 0.3s ease;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--primary-color), #2563eb);
+            color: white;
+            border: none;
+            padding: 16px 45px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 30px;
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--dim-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+        }
+
+        .stat-value.primary { color: var(--primary-color); }
+        .stat-value.accent { color: var(--accent-color); }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <h1>Oasis Typer</h1>
+        <div class="subtitle">lock in</div>
+    </div>
+
+    <div class="hud">
+        <div>Level <span id="level-display" style="color: var(--primary-color)">1</span></div>
+        <div class="timer-badge" id="timer-display">0.0s</div>
+    </div>
+
+    <div class="typing-wrapper" id="typing-wrapper">
+        <div id="quote-display" class="quote-display"></div>
+        <input type="text" id="input-field" class="input-field" autocomplete="off" spellcheck="false">
+    </div>
+
+    <div id="start-screen" class="overlay">
+        <h1>Oasis Typer</h1>
+        <p style="color: var(--dim-text); font-size: 1.3rem; margin-top: 10px;">
+            Start typing to begin. <br>Speed matters.
+        </p>
+        <button onclick="startGame()">Launch</button>
+    </div>
+
+    <div id="level-screen" class="overlay hidden">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Level Complete</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-label">Speed</span>
+                <span class="stat-value primary"><span id="wpm-result">0</span> <span style="font-size: 1rem;">WPM</span></span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Accuracy</span>
+                <span class="stat-value accent"><span id="acc-result">0</span>%</span>
+            </div>
+        </div>
+
+        <button onclick="nextLevel()" id="next-btn">Next Level</button>
+    </div>
+    
+    <div id="victory-screen" class="overlay hidden">
+        <h1 style="color: var(--primary-color)">Mastery Achieved</h1>
+        <p style="font-size: 1.3rem; color: var(--dim-text)">You have completed the journey.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-label">Avg Speed</span>
+                <span class="stat-value primary"><span id="avg-wpm-result">0</span></span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Avg Accuracy</span>
+                <span class="stat-value accent"><span id="avg-acc-result">0</span>%</span>
+            </div>
+        </div>
+
+        <button onclick="startGame()">Replay</button>
+    </div>
+
+</div>
+
+<script>
+    // --- Data ---
+    const levels = [
+        "The ocean stirs the heart, inspires the imagination and brings eternal joy to the soul.",
+        "Simplicity is the ultimate sophistication. It requires us to strip away the non-essential.",
+        "In the middle of difficulty lies opportunity. Keep your eyes on the stars, and your feet on the ground.",
+        "Code is like humor. When you have to explain it, it is bad. Write code that explains itself.",
+        "Deep work is the ability to focus without distraction on a cognitively demanding task.",
+        "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.",
+        "Success is not final, failure is not fatal: it is the courage to continue that counts in the end.",
+        "A user interface is like a joke. If you have to explain it, it is not that good. Design clearly.",
+        "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+        "Mastery is not a function of genius or talent. It is a function of time and intense focus applied to a specific field of knowledge."
+    ];
+
+    // --- State ---
+    let currentLevel = 0;
+    let timerInterval = null;
+    let startTime = null;
+    let isPlaying = false;
+    let hasStartedTyping = false;
+    
+    // Stats storage
+    let sessionStats = [];
+
+    // --- DOM Elements ---
+    const quoteDisplay = document.getElementById('quote-display');
+    const inputField = document.getElementById('input-field');
+    const timerDisplay = document.getElementById('timer-display');
+    const levelDisplay = document.getElementById('level-display');
+    const typingWrapper = document.getElementById('typing-wrapper');
+    
+    const startScreen = document.getElementById('start-screen');
+    const levelScreen = document.getElementById('level-screen');
+    const victoryScreen = document.getElementById('victory-screen');
+
+    const wpmResult = document.getElementById('wpm-result');
+    const accResult = document.getElementById('acc-result');
+    const avgWpmResult = document.getElementById('avg-wpm-result');
+    const avgAccResult = document.getElementById('avg-acc-result');
+
+    // --- Game Logic ---
+
+    function startGame() {
+        currentLevel = 0;
+        sessionStats = [];
+        startScreen.classList.add('hidden');
+        victoryScreen.classList.add('hidden');
+        loadLevel();
+    }
+
+    function loadLevel() {
+        if (currentLevel >= levels.length) {
+            showVictory();
+            return;
+        }
+
+        // Reset
+        levelScreen.classList.add('hidden');
+        inputField.value = "";
+        inputField.focus();
+        hasStartedTyping = false;
+        isPlaying = true;
+        clearInterval(timerInterval);
+        timerDisplay.innerText = "0.0s";
+        levelDisplay.innerText = `${currentLevel + 1} / ${levels.length}`;
+        typingWrapper.classList.remove('active');
+
+        // Render Text
+        quoteDisplay.innerHTML = '';
+        levels[currentLevel].split('').forEach(char => {
+            const span = document.createElement('span');
+            span.innerText = char;
+            quoteDisplay.appendChild(span);
+        });
+
+        // Set initial cursor
+        updateVisuals("");
+    }
+
+    function startTimer() {
+        startTime = Date.now();
+        typingWrapper.classList.add('active');
+        timerInterval = setInterval(() => {
+            const elapsed = (Date.now() - startTime) / 1000;
+            timerDisplay.innerText = elapsed.toFixed(1) + "s";
+        }, 100);
+    }
+
+    function finishLevel() {
+        clearInterval(timerInterval);
+        isPlaying = false;
+        
+        // Calculations
+        const endTime = Date.now();
+        const durationInMinutes = (endTime - startTime) / 60000;
+        const text = levels[currentLevel];
+        const typedVal = inputField.value;
+        
+        // Calculate Accuracy
+        let errors = 0;
+        for (let i = 0; i < text.length; i++) {
+            if (typedVal[i] !== text[i]) {
+                errors++;
+            }
+        }
+        const accuracy = Math.max(0, Math.floor(((text.length - errors) / text.length) * 100));
+
+        // Calculate WPM (Gross)
+        // Formula: (Characters / 5) / Minutes
+        const wpm = Math.round((text.length / 5) / durationInMinutes);
+        
+        // Save Stats
+        sessionStats.push({ wpm: wpm, acc: accuracy });
+
+        // Show Results
+        wpmResult.innerText = wpm;
+        accResult.innerText = accuracy;
+        levelScreen.classList.remove('hidden');
+        
+        // Focus 'Next' button so user can hit Enter
+        document.getElementById('next-btn').focus();
+    }
+
+    function nextLevel() {
+        currentLevel++;
+        loadLevel();
+    }
+
+    function showVictory() {
+        const totalWpm = sessionStats.reduce((acc, curr) => acc + curr.wpm, 0);
+        const totalAcc = sessionStats.reduce((acc, curr) => acc + curr.acc, 0);
+        
+        avgWpmResult.innerText = Math.round(totalWpm / sessionStats.length);
+        avgAccResult.innerText = Math.round(totalAcc / sessionStats.length);
+        
+        victoryScreen.classList.remove('hidden');
+    }
+
+    function updateVisuals(inputValue) {
+        const spans = quoteDisplay.querySelectorAll('span');
+        const inputChars = inputValue.split('');
+
+        spans.forEach((span, index) => {
+            const char = inputChars[index];
+            
+            // Clear classes
+            span.className = '';
+
+            if (char == null) {
+                // Not typed yet
+                if (index === inputChars.length) span.classList.add('current'); // Cursor
+            } else if (char === span.innerText) {
+                span.classList.add('correct');
+            } else {
+                span.classList.add('incorrect');
+            }
+        });
+    }
+
+    // --- Input Listener ---
+    inputField.addEventListener('input', (e) => {
+        if (!isPlaying) return;
+
+        const val = inputField.value;
+        const targetText = levels[currentLevel];
+
+        // Start timer on first char
+        if (!hasStartedTyping && val.length > 0) {
+            hasStartedTyping = true;
+            startTimer();
+        }
+
+        // Prevent typing more than the text length
+        if (val.length > targetText.length) {
+            inputField.value = val.substring(0, targetText.length);
+            return;
+        }
+
+        updateVisuals(inputField.value);
+
+        // Check completion (Only when length matches)
+        if (inputField.value.length === targetText.length) {
+            finishLevel();
+        }
+    });
+
+    // Keep focus
+    document.addEventListener('click', (e) => {
+        if (isPlaying && !e.target.closest('button')) {
+            inputField.focus();
+        }
+    });
+
+</script>
+
+</body>
+</html>
