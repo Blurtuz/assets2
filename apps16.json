@@ -38,13 +38,5 @@
         "category": "Creative",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-sketching.html"
-    },
-    {
-        "id": "test",
-        "name": "test",
-        "thumbnail": "test",
-        "category": "test",
-        "type": "link",
-        "content": "https://google.com"
     }
 ]
