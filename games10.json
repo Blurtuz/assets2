@@ -89,30 +89,6 @@
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/baldis-basics.html"
     },
     {
-        "id": "basket-random",
-        "name": "Basket Random",
-        "thumbnail": "https://cdn4.wouterplanet.com/covers/minigames/basket-random.png",
-        "category": "Sports",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/basket-random.html"
-    },
-    {
-        "id": "boxing-random",
-        "name": "Boxing Random",
-        "thumbnail": "https://codehs.com/uploads/dfbe877e3170fa60f67b355ed7144edd",
-        "category": "Sports",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/boxing-random.html"
-    },
-    {
-        "id": "volley-random",
-        "name": "Volley Random",
-        "thumbnail": "https://cdn4.wouterplanet.com/covers/minigames/voleyrandom.png",
-        "category": "Sports",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/volley-random.html"
-    },
-    {
         "id": "basketball-frvr",
         "name": "Basketball FRVR",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/28.png",
