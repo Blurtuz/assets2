@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full dark">
 <head>
-    <link rel="icon" type="image/png" href="https://codehs.com/uploads/69282483c811dd2d3097d6b6bc99f734"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oasis Apps</title>
@@ -14,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
     <style>
         ::-webkit-scrollbar {
             width: 8px;
@@ -144,7 +144,7 @@
             opacity: 0;
             transition: opacity 0.3s ease, top 0.3s ease;
             pointer-events: none;
-        }z
+        }
         .popup-message.show {
             opacity: 1;
             top: 40px;
@@ -196,8 +196,8 @@
                   </path>
                 </pattern>
               </defs>
-              <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">Oasis Apps.</text>
-              <text text-anchor="middle" x="50" y="15" font-size="17" class="fill-gray-900 dark:fill-white" fill-opacity="0.1">Oasis Apps.</text> 
+              <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">Oasis.</text>
+              <text text-anchor="middle" x="50" y="15" font-size="17" class="fill-gray-900 dark:fill-white" fill-opacity="0.1">Oasis.</text> 
             </svg>
         </h1>
     </header>
@@ -273,7 +273,7 @@
 
     <footer class="text-center py-4 mt-6 border-t border-gray-200 dark:border-gray-800/50">
         <div class="flex justify-center items-center gap-4">
-            <p class="text-sm text-gray-500 dark:text-gray-500">&copy; 2025 Oasis Games. All rights reserved.</p>
+            <p class="text-sm text-gray-500 dark:text-gray-500">&copy; 2025 Oasis Apps. All rights reserved.</p>
             
             <button id="theme-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                 <svg id="theme-icon-light" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
@@ -338,6 +338,45 @@
             popupTimeout = setTimeout(() => {
                 popup.classList.remove('show');
             }, 3000);
+        }
+
+        // --- NEW FUNCTION TO LAUNCH APP IN ABOUT:BLANK ---
+        function launchApp(url) {
+            // 1. Open the new window immediately to avoid popup blockers
+            const win = window.open('about:blank', '_blank');
+            
+            if (!win) {
+                showPopupMessage('Popup blocked! Please allow popups.');
+                return;
+            }
+
+            // Optional: Show a loading message in the new tab
+            win.document.write(`
+                <html>
+                    <body style="background:#111; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif;">
+                        <h2>Loading App...</h2>
+                    </body>
+                </html>
+            `);
+
+            // 2. Fetch the raw code
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(code => {
+                    // 3. Write the fetched code into the window
+                    win.document.open();
+                    win.document.write(code);
+                    win.document.close();
+                })
+                .catch(err => {
+                    console.error('Failed to load app:', err);
+                    win.document.body.innerHTML = "<h2 style='color:red; text-align:center; margin-top:20px;'>Failed to load app code.</h2>";
+                });
         }
 
         function setTheme(theme) {
@@ -627,12 +666,7 @@
                     const app = allApps.find(g => g.id === appId);
                     if (app && app.content) {
                         addRecentlyUsed(app.id);
-                        
-                        const newTab = window.open(app.content, '_blank');
-                        
-                        if (!newTab) {
-                            showPopupMessage('Popup blocked! Please allow popups to play apps.');
-                        }
+                        launchApp(app.content); // Use the new launch function
                     }
                 }
             });
@@ -647,11 +681,7 @@
 
                     if (app && app.content) {
                         addRecentlyUsed(app.id); 
-                        
-                        const newTab = window.open(app.content, '_blank');
-                        if (!newTab) {
-                            showPopupMessage('Popup blocked! Please allow popups to play apps.');
-                        }
+                        launchApp(app.content); // Use the new launch function
                     }
                 });
             }
@@ -696,7 +726,9 @@
                 const featuredImageDiv = featuredAppLink.querySelector('.bg-cover');
                 const featuredTitle = featuredAppLink.querySelector('h2');
 
-                featuredAppLink.href = featuredApp.content; 
+                // Don't set direct href, handle click with launchApp
+                featuredAppLink.removeAttribute('href');
+                featuredAppLink.style.cursor = 'pointer';
                 
                 if (featuredImageDiv) {
                     const imageUrl = featuredApp.bannerImage ? featuredApp.bannerImage : featuredApp.thumbnail;
@@ -710,10 +742,7 @@
                     if (e.button === 0 && !e.ctrlKey && !e.metaKey) { 
                         e.preventDefault(); 
                         addRecentlyUsed(featuredApp.id);
-                        const newTab = window.open(featuredApp.content, '_blank');
-                        if (!newTab) {
-                            showPopupMessage('Popup blocked! Please allow popups to play apps.');
-                        }
+                        launchApp(featuredApp.content); // Use launch function here too
                     }
                 });
                 featuredAppLink.classList.remove('hidden');
@@ -729,9 +758,9 @@
             updateFilterAndRender(); 
         }
 
-
+        
         document.addEventListener('DOMContentLoaded', () => {
-            const appsListUrl = 'https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/apps12.json';
+            const appsListUrl = 'https://cdn.jsdelivr.net/gh/Blurtuz/assets2@refs/heads/main/apps13.json';
 
             fetch(appsListUrl)
                 .then(response => {
@@ -775,38 +804,4 @@
         });
     </script>
 </body>
-<script>
-function updateFooterClock() {
-    const now = new Date();
-
-    const timeOptions = {
-        timeZone: "America/Denver",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: true
-    };
-
-    const time = now.toLocaleTimeString("en-US", timeOptions).replace(":00", "");
-
-    const dateOptions = {
-        timeZone: "America/Denver",
-        month: "2-digit",
-        day: "2-digit",
-        year: "numeric",
-        weekday: "short"
-    };
-
-    const dateParts = now.toLocaleDateString("en-US", dateOptions).split(", ");
-    const date = dateParts[0];   // MM/DD/YYYY
-    const day = dateParts[1].toUpperCase(); // MON → MON
-
-    document.getElementById("footer-clock").textContent =
-        `${time} ${date} ${day}`;
-}
-
-setInterval(updateFooterClock, 1000);
-updateFooterClock();
-</script>
-</footer><p id="footer-clock" style="font-size: 1.2rem; text-align: center; margin-top: 8px;" 
-   class="text-gray-400 dark:text-gray-400"></p></footer>
 </html>
