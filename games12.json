@@ -169,20 +169,12 @@
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/busta-loop.html"
     },
     {
-        "id": "crate-conjurer",
-        "name": "Crate Conjurer",
-        "thumbnail": "https://codehs.com/uploads/779323caeb8c9082f0c09549a6c31472",
+        "id": "Cuphead",
+        "name": "cuphead",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/465.png",
         "category": "Arcade",
         "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/crate-conjurer.html"
-    },
-    {
-        "id": "chatbot",
-        "name": "Chatbot",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/253.png",
-        "category": "Arcade",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/chatbot.html"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/cuphead.html"
     },
     {
         "id": "chess",
@@ -263,22 +255,6 @@
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/duck-life.html"
-    },
-    {
-        "id": "dynamons-1",
-        "name": "Dynamons 1",
-        "thumbnail": "https://codehs.com/uploads/92ea08097ce831a2e7db60ab7f3b9d20",
-        "category": "Adventure",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dynamons-1.html"
-    },
-    {
-        "id": "dynamons-2",
-        "name": "Dynamons 2",
-        "thumbnail": "https://codehs.com/uploads/e17f0d0cc0f882ae5d925789bb8ae4de",
-        "category": "Adventure",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/dynamons-2.html"
     },
     {
         "id": "dadish",
@@ -423,14 +399,6 @@
         "category": "Horror",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fears-to-fathom.html"
-    },
-    {
-        "id": "fruit-ninja",
-        "name": "Fruit Ninja",
-        "thumbnail": "https://codehs.com/uploads/dbb3c70d032778ec429412a92aff3718",
-        "category": "Arcade",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fruit-ninja.html"
     },
     {
         "id": "f1-racing",
@@ -759,15 +727,7 @@
         "category": "Rhythm",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/magic-tiles-3.html"
-    },
-    {
-        "id": "miami-crime-simulator",
-        "name": "Miami Crime Simulator",
-        "thumbnail": "https://codehs.com/uploads/0e6a18b73a927375d887c2ddddfeef94",
-        "category": "Strategy",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/miami-crime-simulator.html"
-    },
+    },    
     {
         "id": "mario-kart-n64",
         "name": "Mario Kart N64",
@@ -1009,6 +969,14 @@
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/pottery-master.html"
     },
     {
+        "id": "repo",
+        "name": "Repo",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/195.png",
+        "category": "Arcade",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/repo.html"
+    },
+    {
         "id": "rainbowobby",
         "name": "Rainbowobby",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/307.png",
@@ -1063,6 +1031,14 @@
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/run-3.html"
+    },
+    {
+        "id": "schoolboy-runaway",
+        "name": "Schoolboy Runaway",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/605.png",
+        "category": "Strategy",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/schoolboy-runaway.html"
     },
     {
         "id": "stickman-swing",
@@ -1383,6 +1359,14 @@
         "category": "Adventure",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/undertale.html"
+    },
+    {
+        "id": "ultrakill",
+        "name": "Ultrakill",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/196.png",
+        "category": "Shooter",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/ultrakill.html"
     },
     {
         "id": "vex-x3m-2",
