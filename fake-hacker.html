@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal access: ROOT</title>
+    <style>
+        /* --- CSS STYLES --- */
+        body {
+            background-color: #000; /* Deep Black */
+            color: #0f0; /* Hacker Green */
+            font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+            font-size: 18px;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            height: 100vh;
+        }
+
+        /* The container for the code */
+        #terminal {
+            white-space: pre-wrap; /* Preserves formatting and wraps text */
+            word-wrap: break-word;
+            line-height: 1.4;
+            text-shadow: 0 0 5px #0f0; /* Slight glow effect */
+        }
+
+        /* The blinking cursor at the end */
+        #cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #0f0;
+            animation: blink 1s step-end infinite;
+            vertical-align: bottom;
+        }
+
+        /* Cursor Animation */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Optional: A subtle CRT scanline effect overlay */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.2) 50%,
+                rgba(0,0,0,0.2)
+            );
+            background-size: 100% 4px;
+            pointer-events: none; /* Lets clicks pass through */
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <div id="terminal"><span id="code-output"></span><span id="cursor"></span></div>
+
+    <script>
+        /* --- JAVASCRIPT LOGIC --- */
+
+        // This is the "Fake Code" database. 
+        // It looks like complex C++/System code.
+        const sourceCode = `
+#include <iostream>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+struct Kernel_Buffer {
+    char data[1024];
+    int status_flag;
+    void* memory_address;
+};
+
+void initiate_handshake(int port) {
+    std::cout << "Connecting to port " << port << "..." << std::endl;
+    // Bypassing firewall protocol 192.168.X.X
+    if (security_level > 5) {
+        override_auth_token("ADMIN_KEY_882");
+    }
+}
+
+class EncryptionMatrix {
+    private:
+        int key[256];
+        bool is_decrypted;
+    public:
+        void inject_payload(const char* hex_stream) {
+            for(int i=0; i<256; i++) {
+                this->key[i] ^= 0xFF; // XOR bitwise operation
+                memory_alloc(0x4F2A + i);
+            }
+            // Root access granted
+            system("sudo rm -rf /var/logs/audit");
+        }
+};
+
+// DECRYPTING DATABANK...
+// 01010101 11001100 10101010
+// PACKET TRACE: 192.158.1.38 -> PROXY -> TARGET
+
+int main() {
+    Kernel_Buffer* kb = new Kernel_Buffer();
+    kb->status_flag = 0x1; 
+    
+    while(oasis games connects()) {
+        upload_virus("trojan_v4.exe");
+        printf("Uploading... %d%% complete\\n", progress);
+        
+        // CRITICAL ERROR: STACK OVERFLOW
+        // ATTEMPTING RECOVERY...
+        recover_sector(0xA12);
+    }
+    
+    return 0;
+}
+// END OF FILE
+// ACCESS GRANTED.
+// WELCOME TO THE MAINFRAME.
+//:"CMD" Diddy suh yo dih!!😳
+`;
+
+        let index = 0; // Tracks where we are in the text
+        const outputElement = document.getElementById('code-output');
+        
+        // Determine how many characters to print per keypress
+        const charsPerStroke = 4; 
+
+        document.addEventListener('keydown', function(e) {
+            // Prevent default browser actions (like F5 refreshing or space scrolling)
+            // But allow Escape to close fullscreen if user is in it
+            if (e.key !== 'Escape' && e.key !== 'F11') {
+                e.preventDefault();
+            }
+
+            // Add a chunk of the source code to the screen
+            // We use Math.min to ensure we don't crash at the end of the string
+            let nextChunk = sourceCode.substring(index, index + charsPerStroke);
+            
+            // Replace newlines with HTML line breaks so it formats correctly
+            // And escape HTML tags so they display as text, not run as code
+            nextChunk = nextChunk
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/\n/g, "<br>");
+
+            outputElement.innerHTML += nextChunk;
+            
+            // Move the index forward
+            index += charsPerStroke;
+
+            // Loop the code if we reach the end
+            if (index >= sourceCode.length) {
+                index = 0;
+            }
+
+            // Automatically scroll to the bottom of the page
+            window.scrollTo(0, document.body.scrollHeight);
+        });
+
+        // Initial message
+        outputElement.innerHTML = "Initializing connection... <br>Press any key to inject code...<br><br>";
+    </script>
+</body>
+</html>
