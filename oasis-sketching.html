@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Sketching Pro (Crash Proof)</title>
+    <style>
+        /* --- CSS Styles --- */
+        :root {
+            --primary: #2c7a7b;
+            --bg-color: #f0f4f8;
+            --panel-bg: #ffffff;
+            --text-color: #2d3748;
+            --border: #cbd5e0;
+        }
+
+        body.dark-mode {
+            --primary: #4fd1c5;
+            --bg-color: #1a202c;
+            --panel-bg: #2d3748;
+            --text-color: #f7fafc;
+            --border: #4a5568;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+            user-select: none; 
+        }
+
+        h1 { margin: 10px 0 20px 0; color: var(--primary); }
+
+        /* Toolbar Layout */
+        .toolbar-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .row {
+            background: var(--panel-bg);
+            padding: 10px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Inputs & Labels */
+        label { font-size: 12px; font-weight: bold; display: flex; flex-direction: column; align-items: center;}
+        input[type="range"] { width: 100px; cursor: pointer; }
+        
+        /* Buttons */
+        button {
+            background-color: var(--panel-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        button:hover { background-color: var(--primary); color: white; border-color: var(--primary); }
+        button.active { background-color: var(--primary); color: white; }
+        
+        /* Special Buttons */
+        .btn-danger { color: #e53e3e; border-color: #e53e3e; }
+        .btn-danger:hover { background-color: #e53e3e; color: white; }
+        
+        /* Canvas Area */
+        .canvas-wrapper {
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: none; /* Hide default cursor */
+        }
+
+        canvas {
+            background-color: #ffffff; 
+            display: block;
+        }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(0,0,0,0.5);
+            z-index: 9999;
+            display: none;
+        }
+        
+        .shortcuts { font-size: 0.8rem; opacity: 0.7; margin-top: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div id="cursorDot" class="cursor-dot"></div>
+
+    <h1>🏝️ Oasis Sketching <span style="font-size:0.5em; opacity:0.5">v2.3</span></h1>
+
+    <div class="toolbar-container">
+        
+        <!-- Top Row: Tools -->
+        <div class="row">
+            <button id="tool-brush" class="active">🖌️ Brush</button>
+            <button id="tool-line">📏 Line</button>
+            <button id="tool-rect">⬜ Rect</button>
+            <button id="tool-circle">⭕ Circle</button>
+            <button id="tool-bucket">🪣 Fill</button>
+            <button id="tool-eraser">🧼 Eraser</button>
+        </div>
+
+        <!-- Middle Row: Settings -->
+        <div class="row">
+            <label>Color <input type="color" id="colorPicker" value="#000000"></label>
+            <label>Size <span id="sizeVal">5px</span><input type="range" id="brushSize" min="1" max="100" value="5"></label>
+            <label>Opacity <span id="opVal">100%</span><input type="range" id="opacity" min="1" max="100" value="100"></label>
+            
+            <div style="border-left: 1px solid #ccc; padding-left: 10px; display:flex; gap:10px;">
+                <button id="btn-undo">↩️ Undo</button>
+                <button id="btn-redo">↪️ Redo</button>
+            </div>
+        </div>
+
+        <!-- Bottom Row: System -->
+        <div class="row">
+            <button id="btn-symmetry">🦋 Symmetry: OFF</button>
+            <button id="btn-darkmode">🌙 Dark Mode</button>
+            <button id="btn-upload">📂 Upload Bg</button>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            <button id="btn-clear" class="btn-danger">❌ Clear</button>
+            <button id="btn-save">💾 Save</button>
+        </div>
+    </div>
+
+    <div class="canvas-wrapper">
+        <canvas id="drawingCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <div class="shortcuts">
+        Shortcuts: B (Brush) | E (Eraser) | [ ] (Size) | Ctrl+Z (Undo) | Ctrl+Y (Redo)
+    </div>
+
+    <script>
+        /* --- CONFIGURATION & STATE --- */
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        const cursorDot = document.getElementById('cursorDot');
+        
+        // Tools
+        let currentTool = 'brush'; 
+        let isDrawing = false;
+        let points = []; 
+        let snapshot; 
+        let isSymmetry = false;
+
+        // History
+        let historyStack = [];
+        let redoStack = [];
+        const MAX_HISTORY = 20;
+
+        // Settings
+        const colorPicker = document.getElementById('colorPicker');
+        const brushSize = document.getElementById('brushSize');
+        const opacitySlider = document.getElementById('opacity');
+        const sizeVal = document.getElementById('sizeVal');
+        const opVal = document.getElementById('opVal');
+        
+        // --- DISPLAY UPDATES ---
+        brushSize.addEventListener('input', () => sizeVal.innerText = brushSize.value + 'px');
+        opacitySlider.addEventListener('input', () => opVal.innerText = opacitySlider.value + '%');
+
+        /* --- INITIALIZATION --- */
+        
+        function initCanvas() {
+            ctx.fillStyle = "white";
+            ctx.fillRect(0,0,canvas.width, canvas.height);
+            saveState();
+
+            if(localStorage.getItem('oasis_autosave_v2')) {
+                const img = new Image();
+                img.src = localStorage.getItem('oasis_autosave_v2');
+                img.onload = () => {
+                    ctx.globalAlpha = 1; 
+                    ctx.drawImage(img, 0, 0);
+                    saveState();
+                };
+            }
+        }
+        
+        initCanvas();
+
+        /* --- CORE FUNCTIONS --- */
+
+        function saveState() {
+            if(historyStack.length >= MAX_HISTORY) historyStack.shift();
+            historyStack.push(canvas.toDataURL());
+            redoStack = []; 
+            localStorage.setItem('oasis_autosave_v2', canvas.toDataURL());
+        }
+
+        function undo() {
+            if (historyStack.length <= 1) return; 
+            redoStack.push(historyStack.pop()); 
+            const prevUrl = historyStack[historyStack.length - 1];
+            restoreCanvas(prevUrl);
+        }
+
+        function redo() {
+            if (redoStack.length === 0) return;
+            const nextUrl = redoStack.pop();
+            historyStack.push(nextUrl);
+            restoreCanvas(nextUrl);
+        }
+
+        function restoreCanvas(url) {
+            const img = new Image();
+            img.src = url;
+            img.onload = () => {
+                ctx.globalAlpha = 1; 
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0);
+            };
+        }
+
+        /* --- MOUSE EVENTS --- */
+
+        canvas.addEventListener('mousedown', (e) => {
+            if (currentTool === 'bucket') {
+                fillColor(e.offsetX, e.offsetY, hexToRgba(colorPicker.value));
+                return; // Bucket is instant, no drag needed
+            }
+
+            isDrawing = true;
+            points = []; 
+            points.push({x: e.offsetX, y: e.offsetY}); 
+            
+            snapshot = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.lineWidth = brushSize.value;
+            ctx.fillStyle = colorPicker.value;
+            ctx.strokeStyle = currentTool === 'eraser' ? '#ffffff' : colorPicker.value;
+
+            if(currentTool === 'eraser') {
+                ctx.globalAlpha = 1.0;
+            } else {
+                ctx.globalAlpha = opacitySlider.value / 100;
+            }
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            updateCursor(e);
+            if (!isDrawing) return;
+
+            points.push({x: e.offsetX, y: e.offsetY});
+
+            ctx.putImageData(snapshot, 0, 0);
+
+            ctx.beginPath();
+            
+            if (currentTool === 'brush' || currentTool === 'eraser') {
+                if (points.length < 2) return;
+                
+                // Draw Original Path
+                ctx.moveTo(points[0].x, points[0].y);
+                for (let i = 1; i < points.length; i++) {
+                    ctx.lineTo(points[i].x, points[i].y);
+                }
+                ctx.stroke();
+
+                // Draw Symmetry Path (Fixed)
+                if (isSymmetry && currentTool === 'brush') {
+                    ctx.save();
+                    // 1. Move origin to top-right corner
+                    ctx.translate(canvas.width, 0); 
+                    // 2. Flip the X-axis horizontally
+                    ctx.scale(-1, 1); 
+                    
+                    ctx.beginPath(); 
+                    // 3. Draw the exact same points (the context flip handles the math)
+                    ctx.moveTo(points[0].x, points[0].y);
+                    for (let i = 1; i < points.length; i++) {
+                        ctx.lineTo(points[i].x, points[i].y);
+                    }
+                    ctx.stroke();
+                    ctx.restore();
+                }
+
+            } else {
+                drawShape(e.offsetX, e.offsetY);
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            if (!isDrawing) return;
+            isDrawing = false;
+            points = []; 
+            saveState();
+            ctx.beginPath();
+            ctx.globalAlpha = 1.0; 
+        });
+        
+        canvas.addEventListener('mouseout', () => {
+            if(isDrawing) {
+                isDrawing = false;
+                saveState();
+                ctx.beginPath();
+                ctx.globalAlpha = 1.0;
+            }
+        });
+
+        /* --- TOOL LOGIC --- */
+
+        function drawShape(x, y) {
+            const startX = points[0].x;
+            const startY = points[0].y;
+            
+            ctx.beginPath();
+            if (currentTool === 'line') {
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            } else if (currentTool === 'rect') {
+                ctx.strokeRect(startX, startY, x - startX, y - startY);
+            } else if (currentTool === 'circle') {
+                const radius = Math.sqrt(Math.pow(x - startX, 2) + Math.pow(y - startY, 2));
+                ctx.arc(startX, startY, radius, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+        }
+
+        // --- FIXED FLOOD FILL ALGORITHM (Crash Proof) ---
+        function fillColor(startX, startY, fillColor) {
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            const width = canvas.width;
+            const height = canvas.height;
+            
+            // "Visited" array prevents infinite loops when filling similar colors
+            const visited = new Uint8Array(width * height);
+
+            const startPos = (startY * width + startX) * 4;
+            const startR = data[startPos], startG = data[startPos+1], startB = data[startPos+2], startA = data[startPos+3];
+            
+            if (startR === fillColor[0] && startG === fillColor[1] && startB === fillColor[2] && startA === fillColor[3]) return;
+
+            const pixelStack = [[startX, startY]];
+            const tolerance = 50; 
+
+            function matchStartColor(pos) {
+                const r = data[pos];
+                const g = data[pos+1];
+                const b = data[pos+2];
+                const a = data[pos+3];
+                
+                return Math.abs(r - startR) <= tolerance &&
+                       Math.abs(g - startG) <= tolerance &&
+                       Math.abs(b - startB) <= tolerance &&
+                       Math.abs(a - startA) <= tolerance;
+            }
+
+            function colorPixel(pos, color) {
+                data[pos] = color[0];
+                data[pos+1] = color[1];
+                data[pos+2] = color[2];
+                data[pos+3] = 255;
+            }
+
+            while (pixelStack.length) {
+                let newPos = pixelStack.pop();
+                let x = newPos[0];
+                let y = newPos[1];
+
+                let pixelPos = (y * width + x) * 4;
+                
+                // Move Up
+                // We check !visited to ensure we don't process the same pixel twice
+                while (y >= 0 && matchStartColor(pixelPos) && !visited[y * width + x]) {
+                    y--;
+                    pixelPos -= width * 4;
+                }
+                
+                pixelPos += width * 4;
+                y++;
+                
+                let reachLeft = false;
+                let reachRight = false;
+                
+                // Move Down and Fill
+                while (y < height && matchStartColor(pixelPos) && !visited[y * width + x]) {
+                    colorPixel(pixelPos, fillColor);
+                    visited[y * width + x] = 1; // Mark as visited!
+
+                    // Check Left
+                    if (x > 0) {
+                        if (matchStartColor(pixelPos - 4) && !visited[y * width + (x-1)]) {
+                            if (!reachLeft) {
+                                pixelStack.push([x - 1, y]);
+                                reachLeft = true;
+                            }
+                        } else if (reachLeft) {
+                            reachLeft = false;
+                        }
+                    }
+
+                    // Check Right
+                    if (x < width - 1) {
+                        if (matchStartColor(pixelPos + 4) && !visited[y * width + (x+1)]) {
+                            if (!reachRight) {
+                                pixelStack.push([x + 1, y]);
+                                reachRight = true;
+                            }
+                        } else if (reachRight) {
+                            reachRight = false;
+                        }
+                    }
+
+                    y++;
+                    pixelPos += width * 4;
+                }
+            }
+            ctx.putImageData(imageData, 0, 0);
+            saveState(); 
+        }
+
+        function hexToRgba(hex) {
+            const bigint = parseInt(hex.slice(1), 16);
+            const r = (bigint >> 16) & 255;
+            const g = (bigint >> 8) & 255;
+            const b = bigint & 255;
+            return [r, g, b, 255];
+        }
+
+        /* --- UI HANDLERS --- */
+        
+        const buttons = document.querySelectorAll('.row button[id^="tool-"]');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentTool = btn.id.replace('tool-', '');
+            });
+        });
+
+        document.getElementById('btn-undo').addEventListener('click', undo);
+        document.getElementById('btn-redo').addEventListener('click', redo);
+        
+        document.getElementById('btn-clear').addEventListener('click', () => {
+            if(confirm('Clear entire drawing?')) {
+                ctx.globalAlpha = 1.0; 
+                ctx.fillStyle = "white";
+                ctx.fillRect(0,0,canvas.width, canvas.height);
+                saveState();
+            }
+        });
+
+        document.getElementById('btn-save').addEventListener('click', () => {
+            ctx.globalAlpha = 1.0; 
+            const link = document.createElement('a');
+            link.download = 'oasis-masterpiece.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        });
+
+        document.getElementById('btn-symmetry').addEventListener('click', (e) => {
+            isSymmetry = !isSymmetry;
+            e.target.textContent = isSymmetry ? "🦋 Symmetry: ON" : "🦋 Symmetry: OFF";
+            e.target.style.background = isSymmetry ? "var(--primary)" : "var(--panel-bg)";
+            e.target.style.color = isSymmetry ? "white" : "var(--text-color)";
+        });
+
+        document.getElementById('btn-darkmode').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        const fileInput = document.getElementById('fileInput');
+        document.getElementById('btn-upload').addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if(file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        ctx.globalAlpha = 1.0; 
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                        saveState();
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        /* --- CURSOR & SHORTCUTS --- */
+        
+        function updateCursor(e) {
+            if(e.target === canvas) {
+                cursorDot.style.display = 'block';
+                const size = brushSize.value;
+                cursorDot.style.width = size + 'px';
+                cursorDot.style.height = size + 'px';
+                cursorDot.style.backgroundColor = currentTool === 'eraser' ? 'white' : colorPicker.value;
+                cursorDot.style.border = currentTool === 'eraser' ? '1px solid black' : 'none';
+                cursorDot.style.opacity = currentTool === 'eraser' ? 1 : opacitySlider.value / 100; 
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            } else {
+                cursorDot.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if(e.ctrlKey && e.key === 'z') { e.preventDefault(); undo(); return; }
+            if(e.ctrlKey && e.key === 'y') { e.preventDefault(); redo(); return; }
+
+            if(e.key.toLowerCase() === 'b') document.getElementById('tool-brush').click();
+            if(e.key.toLowerCase() === 'e') document.getElementById('tool-eraser').click();
+            
+            if(e.key === '[') {
+                brushSize.value = Math.max(1, parseInt(brushSize.value) - 2);
+                sizeVal.innerText = brushSize.value + 'px';
+            }
+            if(e.key === ']') {
+                brushSize.value = Math.min(100, parseInt(brushSize.value) + 2);
+                sizeVal.innerText = brushSize.value + 'px';
+            }
+        });
+
+    </script>
+</body>
+</html>
