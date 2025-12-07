@@ -5,7 +5,7 @@
         "thumbnail": "https://codehs.com/uploads/e2c0e69e0ebe8b874a1e929ba591dd59",
         "category": "Creative",
         "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-studio.html"
     },
     {
         "id": "bomb-timer",
@@ -13,7 +13,7 @@
         "thumbnail": "https://codehs.com/uploads/796a68c82ff1a45bfdb989ab0ce019e6",
         "category": "Fun",
         "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bomb-timer.html"
     },
     {
         "id": "fake-hacker",
@@ -21,7 +21,7 @@
         "thumbnail": "https://codehs.com/uploads/ee8f33246ea0a90d02f53f6804ffe306",
         "category": "Fun",
         "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fake-hacker.html"
     },
     {
         "id": "oasis-typer",
@@ -29,7 +29,7 @@
         "thumbnail": "https://codehs.com/uploads/2f4cc444e13152baf1206b1f53d84b0a",
         "category": "Fun",
         "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-typer.html"
     },
     {
         "id": "oasis-sketching",
@@ -37,6 +37,6 @@
         "thumbnail": "https://codehs.com/uploads/d897fea699ab5b2cf6450df2487e2375",
         "category": "Creative",
         "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/"
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-sketching.html"
     }
 ]
