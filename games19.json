@@ -111,15 +111,7 @@
         "category": "Racing",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bergen-truck-201x.html"
-    },
-    {
-        "id": "beer-rush",
-        "name": "Beer Rush",
-        "thumbnail": "https://codehs.com/uploads/46923d576a9f48ea2d1c71f8a8abf109",
-        "category": "Arcade",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/beer-rush.html"
-    },
+    },  
     {
         "id": "bit-planes",
         "name": "Bit Planes",
@@ -169,7 +161,7 @@
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/busta-loop.html"
     },
     {
-        "id": "Cuphead",
+        "id": "cuphead",
         "name": "cuphead",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/465.png",
         "category": "Arcade",
