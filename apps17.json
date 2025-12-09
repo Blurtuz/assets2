@@ -39,4 +39,12 @@
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-sketching.html"
     }
+    {
+        "id": "computer.com",
+        "name": "Computer.com",
+        "thumbnail": "https://codehs.com/uploads/35322ba93df9f0346ae315f1a3a025a5",
+        "category": "Fun",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/computer.html"
+    }
 ]
