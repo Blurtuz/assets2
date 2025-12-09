@@ -16,6 +16,14 @@
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/12-minibattles.html"
     },
     {
+        "id": "armed-forces",
+        "name": "Armed Forces",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/295.png",
+        "category": "Shooter",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/armed-forces.html"
+    },
+    {
         "id": "adventure-drivers",
         "name": "Adventure Drivers",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/443.png",
