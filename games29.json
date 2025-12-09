@@ -1057,30 +1057,6 @@
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/schoolboy-runaway.html"
     },
     {
-        "id": "stickman-swing",
-        "name": "Stickman Swing",
-        "thumbnail": "https://codehs.com/uploads/7a6b6c4e81e3f61e26ec5b2dd4acab9b",
-        "category": "Arcade",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/stickman-swing.html"
-    },
-    {
-        "id": "super-meat-boy",
-        "name": "Super Meat Boy",
-        "thumbnail": "https://upload.wikimedia.org/wikipedia/en/a/aa/SuperMeatBoy_cover.png",
-        "category": "Adventure",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/super-meat-boy.html"
-    },
-    {
-        "id": "shark-io",
-        "name": "Shark IO",
-        "thumbnail": "https://codehs.com/uploads/0dadd4e91acdde1f300ef6b42f3786b3",
-        "category": "Strategy",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/shark-io.html"
-    },
-    {
         "id": "sandtris",
         "name": "Sandtris",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/311.png",
@@ -1255,14 +1231,6 @@
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/stickman-climb.html"
-    },
-    {
-        "id": "subway-surfers",
-        "name": "Subway Surfers",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/132.png",
-        "category": "Arcade",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/subway-surfers.html"
     },
     {
         "id": "super-mario-bros",
