@@ -1,13 +1,5 @@
 [
     {
-        "id": "apps",
-        "name": "Apps",
-        "thumbnail": "https://codehs.com/uploads/17e4a5092668ea2e67d44a211aec5d20",
-        "category": "Adventure",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/apps8.html"
-    },
-    {
         "id": "12-minibattles",
         "name": "12 MiniBattles",
         "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/295.png",
@@ -55,6 +47,14 @@
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/attack-hole.html"
+    },
+    {
+        "id": "bomb-timer",
+        "name": "Bomb Timer",
+        "thumbnail": "https://codehs.com/uploads/796a68c82ff1a45bfdb989ab0ce019e6",
+        "category": "Apps",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/bomb-timer.html"
     },
     {
         "id": "boom-slingers",
@@ -175,6 +175,14 @@
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/busta-loop.html"
+    },
+    {
+        "id": "computer.com",
+        "name": "Computer.com",
+        "thumbnail": "https://codehs.com/uploads/35322ba93df9f0346ae315f1a3a025a5",
+        "category": "Apps",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/computer.html"
     },
     {
         "id": "cuphead",
@@ -399,6 +407,14 @@
         "category": "Racing",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/excitebike-64.html"
+    },
+    {
+        "id": "fake-hacker",
+        "name": "Fake Hacker",
+        "thumbnail": "https://codehs.com/uploads/ee8f33246ea0a90d02f53f6804ffe306",
+        "category": "Apps",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/fake-hacker.html"
     },
     {
         "id": "fears-to-fathom",
@@ -871,6 +887,30 @@
         "category": "Strategy",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/nubbys-number-factory.html"
+    },
+    {
+        "id": "oasis-studio",
+        "name": "Oasis Studio",
+        "thumbnail": "https://codehs.com/uploads/e2c0e69e0ebe8b874a1e929ba591dd59",
+        "category": "Apps",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-studio.html"
+    },
+     {
+        "id": "oasis-typer",
+        "name": "Oasis Typer",
+        "thumbnail": "https://codehs.com/uploads/2f4cc444e13152baf1206b1f53d84b0a",
+        "category": "Apps",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-typer.html"
+    },
+    {
+        "id": "oasis-sketching",
+        "name": "Oasis Sketching",
+        "thumbnail": "https://codehs.com/uploads/d897fea699ab5b2cf6450df2487e2375",
+        "category": "Apps",
+        "type": "link",
+        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/oasis-sketching.html"
     },
     {
         "id": "oshi-oshi-punch",
