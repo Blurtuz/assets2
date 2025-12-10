@@ -10,7 +10,7 @@
     {
         "id": "armed-forces",
         "name": "Armed Forces",
-        "thumbnail": "https://codehs.com/uploads/f69d57631c287a6f4d41ed2a94072cb3",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/Blurtuz/images@latest/armedforces.png",
         "category": "Shooter",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/armed-forces.html"
@@ -243,7 +243,7 @@
     {
         "id": "crazy-chicken-3d",
         "name": "Crazy Chicken 3D",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/255.png",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/Blurtuz/images@latest/crazychicken3d.png",
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/crazy-chicken-3d.html"
@@ -251,7 +251,7 @@
     {
         "id": "crazy-kitty-3d",
         "name": "Crazy Kitty 3D",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/256.png",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/Blurtuz/images@latest/crazykitty3d.png",
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/crazy-kitty-3d.html"
@@ -763,7 +763,7 @@
     {
         "id": "mario-kart-n64",
         "name": "Mario Kart N64",
-        "thumbnail": "https://codehs.com/uploads/ac272eaf1006d55c7a2265c5588aaf82",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/Blurtuz/images@latest/n64kart.png",
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/mario-kart-n64.html"
@@ -971,7 +971,7 @@
     {
         "id": "people-playground",
         "name": "People Playground",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/194.png",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/Blurtuz/images@latest/peopleplayground.png",
         "category": "Sandbox",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/people-playground.html"
@@ -1027,7 +1027,7 @@
     {
         "id": "repo",
         "name": "Repo",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/195.png",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/Blurtuz/images@latest/repo.png",
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/repo.html"
@@ -1071,14 +1071,6 @@
         "category": "Arcade",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/rollyvortex.html"
-    },
-    {
-        "id": "run-2",
-        "name": "Run 2",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/176.png",
-        "category": "Arcade",
-        "type": "link",
-        "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/run-2.html"
     },
     {
         "id": "run-3",
@@ -1387,7 +1379,7 @@
     {
         "id": "ultrakill",
         "name": "Ultrakill",
-        "thumbnail": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/196.png",
+        "thumbnail": "https://cdn.jsdelivr.net/gh/Blurtuz/images@latest/ultrakill.png",
         "category": "Shooter",
         "type": "link",
         "content": "https://cdn.jsdelivr.net/gh/Blurtuz/assets2@latest/ultrakill.html"
